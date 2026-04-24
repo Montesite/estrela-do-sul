@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://estrelladosul.com.br/sitemap.xml

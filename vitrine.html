@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demonstração de Vitrine — Estrela do Sul</title>
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo.png">
+
+  <style>
+    :root {
+      --dourado:     #C9A84C;
+      --dourado-2:   #A8832A;
+      --preto:       #1A1A1A;
+      --preto-2:     #111111;
+      --branco:      #FFFFFF;
+      --cinza-claro: #F7F5F3;
+      --texto-leve:  #6B7280;
+      --header-h:    80px;
+      --badge-h:     63px;
+      --ff-titulo:   'Playfair Display', serif;
+      --ff-corpo:    'Inter', sans-serif;
+      --tr:          0.3s ease;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      height: 100%;
+      overflow: hidden;
+      font-family: var(--ff-corpo);
+      background: var(--branco);
+    }
+
+    /* scrollbar oculta */
+    html::-webkit-scrollbar { display: none; }
+    html { -ms-overflow-style: none; scrollbar-width: none; }
+
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    .container {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ── HEADER ── */
+    #header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      height: var(--header-h);
+      background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,0.07);
+      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .logo-wrap { display: flex; align-items: center; }
+    .logo-img {
+      height: 46px;
+      width: auto;
+      max-width: 200px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+    .nav-links a {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--texto-leve);
+      padding: 0.5rem 0.85rem;
+      border-radius: 8px;
+      transition: color var(--tr), background var(--tr);
+    }
+    .nav-links a:hover { color: var(--preto); background: var(--cinza-claro); }
+
+    .nav-cta {
+      background: var(--preto) !important;
+      color: var(--branco) !important;
+      font-weight: 600 !important;
+      padding: 0.5rem 1.3rem !important;
+      border-radius: 8px;
+    }
+    .nav-cta:hover { background: var(--dourado) !important; color: var(--preto) !important; }
+
+    .nav-vitrine {
+      color: var(--dourado) !important;
+      font-weight: 600 !important;
+      border: 1px solid rgba(201,168,76,0.30);
+      background: rgba(201,168,76,0.06) !important;
+    }
+    .nav-vitrine:hover {
+      background: rgba(201,168,76,0.14) !important;
+      color: var(--dourado-2) !important;
+    }
+    .nav-vitrine.active {
+      background: var(--dourado) !important;
+      color: var(--preto) !important;
+      border-color: var(--dourado);
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px; height: 2px;
+      background: var(--preto);
+      border-radius: 2px;
+      transition: all var(--tr);
+    }
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
+
+    /* ── MENU MOBILE ── */
+    #navMenu {
+      position: fixed;
+      top: var(--header-h);
+      left: 0; right: 0;
+      background: rgba(255,255,255,0.99);
+      backdrop-filter: blur(12px);
+      z-index: 999;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+    #navMenu.open { max-height: 460px; padding: 16px 0 24px; }
+    #navMenu a {
+      display: block;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--texto-leve);
+      padding: 13px 24px;
+      border-bottom: 1px solid rgba(0,0,0,0.04);
+      transition: color var(--tr), background var(--tr);
+    }
+    #navMenu a:hover { color: var(--preto); background: var(--cinza-claro); }
+    #navMenu .nav-vitrine {
+      color: var(--dourado) !important;
+      font-weight: 600;
+      background: rgba(201,168,76,0.06);
+    }
+    #navMenu .nav-vitrine.active {
+      background: rgba(201,168,76,0.12) !important;
+    }
+    #navMenu .nav-cta {
+      display: block;
+      margin: 16px 24px 0;
+      text-align: center;
+      border-radius: 8px;
+      background: var(--preto) !important;
+      color: var(--branco) !important;
+      padding: 14px 24px !important;
+      border-bottom: none !important;
+    }
+
+    /* ── IFRAME WRAPPER ── */
+    #vitrine-wrapper {
+      position: fixed;
+      top: var(--header-h);
+      left: 0;
+      right: 0;
+      bottom: var(--badge-h);
+      overflow: hidden;
+    }
+
+    #vitrine-frame {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* ── BADGE ── */
+    #montesite-footer-badge {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: var(--badge-h);
+      z-index: 100;
+      background: var(--preto-2);
+    }
+
+    /* ── RESPONSIVIDADE ── */
+    @media (max-width: 1023px) {
+      :root { --header-h: 68px; }
+      nav .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .logo-img { height: 60px; }
+    }
+    @media (max-width: 768px) {
+      .logo-img { height: 48px; }
+    }
+    @media (max-width: 480px) {
+      :root { --header-h: 60px; }
+      .logo-img { height: 40px; }
+    }
+    @media (max-width: 360px) {
+      :root { --header-h: 56px; }
+      .logo-img { height: 34px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══════ HEADER ══════ -->
+  <header id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-wrap" aria-label="Estrela do Sul — início">
+        <img src="images/logo.png" alt="Estrela do Sul" class="logo-img">
+      </a>
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a href="index.html#sobre">Sobre</a>
+        <a href="index.html#portfolio">Portfólio</a>
+        <a href="index.html#servicos">Serviços</a>
+        <a href="index.html#mvv">Empresa</a>
+        <a href="index.html#contato">Contato</a>
+        <a href="vitrine.html" class="nav-vitrine active">
+          <i class="fa-solid fa-store"></i> Vitrine
+        </a>
+        <a href="https://wa.me/5511976122881" target="_blank" rel="noopener noreferrer" class="nav-cta">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- nav mobile -->
+  <nav id="navMenu" aria-label="Menu mobile">
+    <a href="index.html#sobre">Sobre</a>
+    <a href="index.html#portfolio">Portfólio</a>
+    <a href="index.html#servicos">Serviços</a>
+    <a href="index.html#mvv">Empresa</a>
+    <a href="index.html#contato">Contato</a>
+    <a href="vitrine.html" class="nav-vitrine active">
+      <i class="fa-solid fa-store"></i> Vitrine Online
+    </a>
+    <a href="https://wa.me/5511976122881" target="_blank" rel="noopener noreferrer" class="nav-cta">
+      <i class="fa-brands fa-whatsapp"></i> Falar no WhatsApp
+    </a>
+  </nav>
+
+  <!-- ══════ VITRINE IFRAME ══════ -->
+  <div id="vitrine-wrapper">
+    <iframe
+      id="vitrine-frame"
+      src="https://estreladosulcomerciodebebidasltda.egestor.com.br/vitrine/"
+      title="Vitrine Estrela do Sul"
+      allowfullscreen
+      loading="lazy">
+    </iframe>
+  </div>
+
+  <!-- MonteSite Badge -->
+  <div id="montesite-footer-badge"></div>
+  <script src="https://vaabpicspdbolvutnscp.supabase.co/functions/v1/get-footer-iframe"></script>
+
+  <script>
+    /* ── HAMBURGER ── */
+    const hamburger = document.getElementById('hamburger');
+    const navMenu   = document.getElementById('navMenu');
+
+    hamburger.addEventListener('click', () => {
+      const open = navMenu.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      hamburger.setAttribute('aria-expanded', open);
+    });
+
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('open');
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', false);
+      });
+    });
+
+    /* ── RESIZE DINÂMICO (fallback para browsers que não respeitam CSS vars no position) ── */
+    function resizeFrame() {
+      const headerH = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h')) || 80;
+      const badgeH  = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--badge-h'))  || 63;
+      const wrapper = document.getElementById('vitrine-wrapper');
+      wrapper.style.top    = headerH + 'px';
+      wrapper.style.bottom = badgeH  + 'px';
+    }
+    resizeFrame();
+    window.addEventListener('resize', resizeFrame);
+  </script>
+</body>
+</html>

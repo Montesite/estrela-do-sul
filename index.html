@@ -1,0 +1,2447 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estrela do Sul</title>
+  <meta name="description" content="Estrela do Sul Comércio de Bebidas — distribuição especializada de vinhos selecionados da linha Família Millán. Parcerias sólidas para restaurantes, varejo e distribuidores em todo o Brasil.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Estrela do Sul Comércio de Bebidas LTDA">
+  <meta name="theme-color" content="#1A1A1A">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Estrela do Sul">
+  <meta property="og:description" content="Distribuição especializada de vinhos selecionados da linha Família Millán. Vinhos selecionados, distribuição eficiente e parcerias de confiança.">
+  <meta property="og:image" content="images/logo.png">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Estrela do Sul">
+  <meta name="twitter:description" content="Distribuição especializada de vinhos selecionados da linha Família Millán.">
+  <meta name="twitter:image" content="images/logo.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="apple-touch-icon" href="images/logo.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root {
+      --azul:         #7BA4B8;
+      --azul-escuro:  #5A8A9F;
+      --preto:        #1A1A1A;
+      --preto-2:      #111111;
+      --branco:       #FFFFFF;
+      --cinza-claro:  #F7F5F3;
+      --cinza:        #E8E4DF;
+      --cinza-2:      #D0CBC4;
+      --dourado:      #C9A84C;
+      --dourado-2:    #A8832A;
+      --dourado-pale: #F9F3E3;
+      --texto:        #1A1A1A;
+      --texto-leve:   #6B7280;
+      --header-h:     80px;
+      --ff-titulo:    'Playfair Display', serif;
+      --ff-corpo:     'Inter', sans-serif;
+      --tr:           0.3s ease;
+      --radius:       12px;
+      --sombra:       0 4px 24px rgba(0,0,0,0.12);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body {
+      font-family: var(--ff-corpo);
+      background: var(--branco);
+      color: var(--texto);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    .container {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    section { padding: 96px 0; }
+
+    /* ══════════════════════════════════
+       COMPONENTES GLOBAIS
+    ══════════════════════════════════ */
+    .section-tag {
+      display: block;
+      width: fit-content;
+      margin: 0 auto 12px;
+      font-family: var(--ff-corpo);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--dourado);
+    }
+    .section-title {
+      font-family: var(--ff-titulo);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      line-height: 1.15;
+      text-align: center;
+      color: var(--texto);
+      margin-bottom: 16px;
+    }
+    .section-title span { color: var(--dourado); }
+    .section-title.light { color: var(--branco); }
+    .section-desc {
+      text-align: center;
+      color: var(--texto-leve);
+      font-size: 1rem;
+      max-width: 580px;
+      margin: 0 auto 56px;
+      line-height: 1.8;
+    }
+    .section-desc.light { color: rgba(255,255,255,0.48); }
+
+    /* ══════════════════════════════════
+       BOTÕES
+    ══════════════════════════════════ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      font-family: var(--ff-corpo);
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      padding: 0.9rem 2rem;
+      border-radius: var(--radius);
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: all var(--tr);
+    }
+    .btn-dourado {
+      background: var(--dourado);
+      color: var(--preto);
+      border-color: var(--dourado);
+    }
+    .btn-dourado:hover {
+      background: var(--dourado-2);
+      border-color: var(--dourado-2);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(201,168,76,0.35);
+    }
+    .btn-outline-branco {
+      background: rgba(255,255,255,0.10);
+      color: var(--branco);
+      border-color: rgba(255,255,255,0.50);
+    }
+    .btn-outline-branco:hover {
+      background: rgba(255,255,255,0.20);
+      border-color: rgba(255,255,255,0.85);
+      transform: translateY(-2px);
+    }
+    .btn-outline-escuro {
+      background: transparent;
+      color: var(--preto);
+      border-color: var(--preto);
+    }
+    .btn-outline-escuro:hover {
+      background: var(--preto);
+      color: var(--branco);
+      transform: translateY(-2px);
+    }
+    .btn-vitrine {
+      background: rgba(201,168,76,0.10);
+      color: var(--dourado);
+      border-color: rgba(201,168,76,0.35);
+    }
+    .btn-vitrine:hover {
+      background: var(--dourado);
+      color: var(--preto);
+      border-color: var(--dourado);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(201,168,76,0.35);
+    }
+
+    /* ── NAV VITRINE ── */
+    .nav-vitrine {
+      color: var(--dourado) !important;
+      font-weight: 600 !important;
+      border: 1px solid rgba(201,168,76,0.28) !important;
+      background: rgba(201,168,76,0.06) !important;
+    }
+    .nav-vitrine:hover {
+      background: rgba(201,168,76,0.14) !important;
+      color: var(--dourado-2) !important;
+    }
+    #navMenu .nav-vitrine {
+      color: var(--dourado) !important;
+      font-weight: 600;
+      border-bottom: 1px solid rgba(0,0,0,0.04) !important;
+      background: rgba(201,168,76,0.04) !important;
+      border-left: 3px solid var(--dourado);
+      padding-left: 21px;
+    }
+
+    /* ── VITRINE CTA (dentro do portfólio) ── */
+    .vitrine-cta {
+      margin-top: 56px;
+      background: var(--preto);
+      border-radius: 20px;
+      padding: 52px 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    .vitrine-cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(201,168,76,0.08) 0%, transparent 55%);
+      pointer-events: none;
+    }
+    .vitrine-cta::after {
+      content: '';
+      position: absolute;
+      top: -40px; right: -40px;
+      width: 260px; height: 260px;
+      border: 1px solid rgba(201,168,76,0.06);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .vitrine-cta-content { position: relative; z-index: 1; }
+    .vitrine-cta-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--dourado);
+      margin-bottom: 14px;
+    }
+    .vitrine-cta-tag i { font-size: 0.5rem; animation: pulse 1.8s ease infinite; }
+    @keyframes pulse { 0%,100%{opacity:1}50%{opacity:0.3} }
+    .vitrine-cta-content h3 {
+      font-family: var(--ff-titulo);
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 700;
+      color: var(--branco);
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+    .vitrine-cta-content h3 span { color: var(--dourado); }
+    .vitrine-cta-content p {
+      color: rgba(255,255,255,0.45);
+      font-size: 0.96rem;
+      line-height: 1.8;
+      max-width: 520px;
+      margin-bottom: 32px;
+    }
+    .vitrine-cta-deco {
+      position: relative;
+      z-index: 1;
+      font-size: 7rem;
+      color: rgba(201,168,76,0.10);
+      flex-shrink: 0;
+      line-height: 1;
+    }
+
+    /* ══════════════════════════════════
+       LOADING
+    ══════════════════════════════════ */
+    /* ══════════════════════════════════
+       SCROLL PROGRESS
+    ══════════════════════════════════ */
+    #scroll-progress {
+      position: fixed;
+      top: 0; left: 0;
+      height: 2px;
+      width: 0%;
+      background: linear-gradient(90deg, var(--dourado), var(--dourado-2));
+      z-index: 2000;
+      transition: width 0.1s linear;
+    }
+
+    /* ══════════════════════════════════
+       HEADER
+    ══════════════════════════════════ */
+    #header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      height: var(--header-h);
+      background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,0.07);
+      transition: box-shadow var(--tr);
+    }
+    #header.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,0.1); }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+    }
+    .logo-wrap { display: flex; align-items: center; }
+    .logo-img {
+      height: 46px;
+      width: auto;
+      max-width: 200px;
+      display: block;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+    .nav-links a {
+      font-family: var(--ff-corpo);
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--texto-leve);
+      padding: 0.5rem 0.85rem;
+      border-radius: 8px;
+      transition: color var(--tr), background var(--tr);
+    }
+    .nav-links a:hover { color: var(--preto); background: var(--cinza-claro); }
+    .nav-cta {
+      background: var(--preto) !important;
+      color: var(--branco) !important;
+      font-weight: 600 !important;
+      padding: 0.5rem 1.3rem !important;
+      border-radius: 8px;
+    }
+    .nav-cta:hover { background: var(--dourado) !important; color: var(--preto) !important; }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px; height: 2px;
+      background: var(--texto);
+      border-radius: 2px;
+      transition: all var(--tr);
+    }
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
+
+    #navMenu {
+      position: fixed;
+      top: var(--header-h);
+      left: 0; right: 0;
+      background: rgba(255,255,255,0.99);
+      backdrop-filter: blur(12px);
+      z-index: 999;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+    #navMenu.open { max-height: 420px; padding: 16px 0 24px; }
+    #navMenu a {
+      display: block;
+      font-family: var(--ff-corpo);
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--texto-leve);
+      padding: 13px 24px;
+      border-bottom: 1px solid rgba(0,0,0,0.04);
+      transition: color var(--tr), background var(--tr);
+    }
+    #navMenu a:hover { color: var(--preto); background: var(--cinza-claro); }
+    #navMenu .nav-cta {
+      display: block;
+      margin: 16px 24px 0;
+      text-align: center;
+      border-radius: 8px;
+      background: var(--preto) !important;
+      color: var(--branco) !important;
+      padding: 14px 24px !important;
+    }
+
+    /* ══════════════════════════════════
+       HERO
+    ══════════════════════════════════ */
+    #hero {
+      min-height: 100vh;
+      padding-top: var(--header-h);
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(135deg, rgba(17,11,5,0.82) 0%, rgba(31,26,20,0.78) 40%, rgba(42,31,14,0.80) 100%),
+        url('images/bg-hero.jpg') center / cover no-repeat;
+    }
+    .hero-deco {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .hero-deco::before {
+      content: '';
+      position: absolute;
+      top: -30%; right: -10%;
+      width: 700px; height: 700px;
+      border: 1px solid rgba(201,168,76,0.06);
+      border-radius: 50%;
+    }
+    .hero-deco::after {
+      content: '';
+      position: absolute;
+      bottom: -30%; left: -8%;
+      width: 500px; height: 500px;
+      border: 1px solid rgba(201,168,76,0.04);
+      border-radius: 50%;
+    }
+    .hero-deco-dot {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(201,168,76,0.05);
+    }
+    .hero-deco-dot.a { width: 320px; height: 320px; top: 5%; right: 3%; }
+    .hero-deco-dot.b { width: 180px; height: 180px; bottom: 10%; left: 2%; }
+    .hero-deco-dot.c { width: 100px; height: 100px; top: 55%; right: 22%; }
+    .hero-line {
+      position: absolute;
+      top: 0; left: 50%;
+      width: 1px; height: 100%;
+      background: linear-gradient(180deg, transparent, rgba(201,168,76,0.10), transparent);
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+      padding: 56px 0;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(201,168,76,0.10);
+      border: 1px solid rgba(201,168,76,0.25);
+      border-radius: 100px;
+      padding: 0.4rem 1.1rem;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--dourado);
+      margin-bottom: 24px;
+    }
+    .hero-eyebrow i { font-size: 0.8rem; }
+
+    .hero-text h1 {
+      font-family: var(--ff-titulo);
+      font-size: clamp(3rem, 6vw, 5rem);
+      font-weight: 800;
+      color: var(--branco);
+      line-height: 1.05;
+      margin-bottom: 22px;
+      letter-spacing: -1px;
+    }
+    .hero-text h1 span { color: var(--dourado); }
+
+    .hero-text h2 {
+      font-family: var(--ff-corpo);
+      font-size: clamp(0.95rem, 1.6vw, 1.1rem);
+      font-weight: 400;
+      color: rgba(255,255,255,0.6);
+      max-width: 480px;
+      line-height: 1.9;
+      margin-bottom: 38px;
+      font-style: italic;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 36px;
+      padding-top: 36px;
+      border-top: 1px solid rgba(201,168,76,0.14);
+    }
+    .hero-stat strong {
+      display: block;
+      font-family: var(--ff-titulo);
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--dourado);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .hero-stat span {
+      font-size: 0.67rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.32);
+    }
+
+    /* card direita */
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .hero-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(201,168,76,0.18);
+      border-radius: 20px;
+      padding: 52px 40px;
+      text-align: center;
+      backdrop-filter: blur(20px);
+      width: 100%;
+      max-width: 380px;
+      animation: floatCard 8s ease-in-out infinite;
+    }
+    @keyframes floatCard {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-12px); }
+    }
+    .hero-card-icon {
+      width: 80px; height: 80px;
+      background: rgba(201,168,76,0.10);
+      border: 1px solid rgba(201,168,76,0.24);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: var(--dourado);
+      margin: 0 auto 20px;
+    }
+    .hero-card-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--dourado);
+      margin-bottom: 8px;
+    }
+    .hero-card h3 {
+      font-family: var(--ff-titulo);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--branco);
+      margin-bottom: 12px;
+      font-style: italic;
+      line-height: 1.3;
+    }
+    .hero-card p {
+      font-size: 0.84rem;
+      color: rgba(255,255,255,0.46);
+      line-height: 1.75;
+      margin-bottom: 28px;
+    }
+    .hero-card-tiers {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+    .hero-card-tier {
+      background: rgba(201,168,76,0.08);
+      border: 1px solid rgba(201,168,76,0.16);
+      border-radius: 8px;
+      padding: 8px 10px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.65);
+      letter-spacing: 0.3px;
+    }
+
+    /* ══════════════════════════════════
+       DIFERENCIAIS
+    ══════════════════════════════════ */
+    #diferenciais {
+      background: var(--preto);
+      padding: 56px 0;
+    }
+    .dif-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .dif-item {
+      text-align: center;
+      padding: 32px 20px;
+      border-right: 1px solid rgba(255,255,255,0.07);
+    }
+    .dif-item:last-child { border-right: none; }
+    .dif-item i {
+      font-size: 1.6rem;
+      color: var(--dourado);
+      margin-bottom: 14px;
+      display: block;
+    }
+    .dif-item strong {
+      display: block;
+      font-family: var(--ff-titulo);
+      font-size: 1.0rem;
+      font-weight: 600;
+      color: var(--branco);
+      margin-bottom: 6px;
+    }
+    .dif-item span {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.38);
+    }
+
+    /* ══════════════════════════════════
+       SOBRE
+    ══════════════════════════════════ */
+    #sobre {
+      background:
+        linear-gradient(rgba(247,245,243,0.92), rgba(247,245,243,0.92)),
+        url('images/bg-sobre.jpg') center / cover no-repeat;
+      background-attachment: scroll, fixed;
+    }
+
+    .sobre-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+    .sobre-visual { position: relative; }
+    .sobre-box {
+      background: var(--preto);
+      border-radius: 20px;
+      padding: 56px 44px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .sobre-box::before {
+      content: '';
+      position: absolute;
+      top: -40%; right: -20%;
+      width: 320px; height: 320px;
+      border: 1px solid rgba(201,168,76,0.06);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .sobre-box-icon {
+      font-size: 2.8rem;
+      color: var(--dourado);
+      margin-bottom: 20px;
+      display: block;
+    }
+    .sobre-box-brand {
+      font-family: var(--ff-titulo);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--branco);
+      margin-bottom: 4px;
+    }
+    .sobre-box-sub {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--dourado);
+      margin-bottom: 24px;
+    }
+    .sobre-box p {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.48);
+      line-height: 1.8;
+      font-style: italic;
+    }
+    .sobre-badge {
+      position: absolute;
+      bottom: -20px; right: -20px;
+      width: 88px; height: 88px;
+      background: var(--dourado);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(201,168,76,0.4);
+    }
+    .sobre-badge strong {
+      font-family: var(--ff-titulo);
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--preto);
+      line-height: 1;
+    }
+    .sobre-badge span {
+      font-size: 0.56rem;
+      font-weight: 700;
+      color: var(--preto);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .sobre-text .section-tag { margin: 0 0 12px; }
+    .sobre-text h2 {
+      font-family: var(--ff-titulo);
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 700;
+      color: var(--texto);
+      line-height: 1.2;
+      margin-bottom: 24px;
+      text-align: left;
+    }
+    .sobre-text h2 span { color: var(--dourado); }
+    .sobre-text p {
+      color: var(--texto-leve);
+      font-size: 0.96rem;
+      line-height: 1.88;
+      margin-bottom: 16px;
+    }
+    .sobre-text p strong { color: var(--texto); font-weight: 600; }
+    .sobre-highlights {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin: 24px 0 28px;
+    }
+    .sobre-highlight {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--texto);
+    }
+    .sobre-highlight i {
+      width: 28px; height: 28px;
+      background: var(--dourado-pale);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      color: var(--dourado-2);
+      flex-shrink: 0;
+    }
+
+    /* ══════════════════════════════════
+       PORTFÓLIO
+    ══════════════════════════════════ */
+    #portfolio { background: var(--branco); }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .portfolio-card {
+      background: var(--cinza-claro);
+      border: 1px solid var(--cinza);
+      border-radius: var(--radius);
+      padding: 36px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      transition: all var(--tr);
+    }
+    .portfolio-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--dourado), var(--dourado-2));
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+    }
+    .portfolio-card:hover::before { transform: scaleX(1); }
+    .portfolio-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--sombra);
+    }
+    .portfolio-card.destaque {
+      background: var(--preto);
+      border-color: rgba(201,168,76,0.3);
+    }
+    .portfolio-card.destaque::before { transform: scaleX(1); }
+    .portfolio-card.destaque:hover { box-shadow: 0 12px 40px rgba(0,0,0,0.3); }
+    .portfolio-tier {
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--dourado);
+      margin-bottom: 12px;
+    }
+    .portfolio-icon {
+      font-size: 2.2rem;
+      margin-bottom: 16px;
+      display: block;
+    }
+    .portfolio-card:not(.destaque) .portfolio-icon { color: var(--azul); }
+    .portfolio-card.destaque .portfolio-icon { color: var(--dourado); }
+    .portfolio-card h3 {
+      font-family: var(--ff-titulo);
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .portfolio-card:not(.destaque) h3 { color: var(--texto); }
+    .portfolio-card.destaque h3 { color: var(--branco); }
+    .portfolio-card p {
+      font-size: 0.85rem;
+      line-height: 1.75;
+    }
+    .portfolio-card:not(.destaque) p { color: var(--texto-leve); }
+    .portfolio-card.destaque p { color: rgba(255,255,255,0.5); }
+
+    /* ══════════════════════════════════
+       SERVIÇOS
+    ══════════════════════════════════ */
+    #servicos {
+      background:
+        linear-gradient(rgba(26,26,26,0.90), rgba(26,26,26,0.90)),
+        url('images/bg-servicos.jpg') center / cover no-repeat;
+      background-attachment: scroll, fixed;
+    }
+
+    .servicos-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .servico-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius);
+      padding: 40px 28px;
+      transition: all var(--tr);
+      position: relative;
+      overflow: hidden;
+    }
+    .servico-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--dourado), var(--dourado-2));
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+    }
+    .servico-card:hover::before { transform: scaleX(1); }
+    .servico-card:hover {
+      background: rgba(255,255,255,0.06);
+      border-color: rgba(201,168,76,0.18);
+      transform: translateY(-5px);
+    }
+    .servico-icon {
+      width: 56px; height: 56px;
+      background: rgba(201,168,76,0.10);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      color: var(--dourado);
+      margin-bottom: 20px;
+      transition: all var(--tr);
+    }
+    .servico-card:hover .servico-icon {
+      background: var(--dourado);
+      color: var(--preto);
+    }
+    .servico-card h3 {
+      font-family: var(--ff-titulo);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--branco);
+      margin-bottom: 12px;
+    }
+    .servico-card p {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.42);
+      line-height: 1.8;
+    }
+
+    /* ══════════════════════════════════
+       MERCADO
+    ══════════════════════════════════ */
+    #mercado { background: var(--cinza-claro); }
+
+    .mercado-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .mercado-text .section-tag { margin: 0 0 12px; }
+    .mercado-text h2 {
+      font-family: var(--ff-titulo);
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 700;
+      color: var(--texto);
+      line-height: 1.2;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    .mercado-text h2 span { color: var(--dourado); }
+    .mercado-text > p {
+      color: var(--texto-leve);
+      font-size: 0.96rem;
+      line-height: 1.85;
+      margin-bottom: 28px;
+    }
+    .mercado-segs {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    .mercado-seg {
+      background: var(--branco);
+      border: 1px solid var(--cinza);
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: all var(--tr);
+    }
+    .mercado-seg:hover { border-color: var(--dourado); transform: translateX(4px); }
+    .mercado-seg i { font-size: 1.1rem; color: var(--dourado); flex-shrink: 0; }
+    .mercado-seg span { font-size: 0.86rem; font-weight: 500; color: var(--texto); }
+
+    .mercado-features {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .mercado-feature {
+      background: var(--branco);
+      border: 1px solid var(--cinza);
+      border-radius: var(--radius);
+      padding: 20px 22px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      transition: all var(--tr);
+    }
+    .mercado-feature:hover {
+      border-color: var(--dourado);
+      box-shadow: 0 4px 20px rgba(201,168,76,0.1);
+    }
+    .mercado-feature-icon {
+      width: 44px; height: 44px;
+      background: var(--dourado-pale);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .mercado-feature-icon i { font-size: 1.1rem; color: var(--dourado-2); }
+    .mercado-feature h4 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--texto);
+      margin-bottom: 4px;
+    }
+    .mercado-feature p {
+      font-size: 0.84rem;
+      color: var(--texto-leve);
+      line-height: 1.6;
+    }
+
+    /* ══════════════════════════════════
+       MVV
+    ══════════════════════════════════ */
+    #mvv {
+      background:
+        linear-gradient(rgba(255,255,255,0.93), rgba(255,255,255,0.93)),
+        url('images/bg-mvv.jpg') center / cover no-repeat;
+      background-attachment: scroll, fixed;
+    }
+
+    .mvv-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .mvv-card {
+      border: 1px solid var(--cinza);
+      border-radius: var(--radius);
+      padding: 44px 32px;
+      text-align: center;
+      transition: all var(--tr);
+      position: relative;
+      overflow: hidden;
+    }
+    .mvv-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--dourado), var(--dourado-2));
+    }
+    .mvv-card:hover { transform: translateY(-5px); box-shadow: var(--sombra); }
+    .mvv-icon {
+      width: 64px; height: 64px;
+      border-radius: 50%;
+      background: var(--dourado-pale);
+      border: 1px solid rgba(201,168,76,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: var(--dourado);
+      margin: 0 auto 20px;
+    }
+    .mvv-card h3 {
+      font-family: var(--ff-titulo);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--texto);
+      margin-bottom: 16px;
+    }
+    .mvv-card p {
+      font-size: 0.88rem;
+      color: var(--texto-leve);
+      line-height: 1.85;
+    }
+    .mvv-values {
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .mvv-values li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.86rem;
+      color: var(--texto-leve);
+      line-height: 1.5;
+    }
+    .mvv-values li i { color: var(--dourado); font-size: 0.72rem; margin-top: 4px; flex-shrink: 0; }
+
+    /* ══════════════════════════════════
+       CTA COMERCIAL
+    ══════════════════════════════════ */
+    #comercial {
+      background:
+        linear-gradient(135deg, rgba(17,17,17,0.88) 0%, rgba(26,26,26,0.88) 100%),
+        url('images/bg-contato.jpg') center / cover no-repeat;
+      background-attachment: scroll, fixed;
+      padding: 96px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    #comercial::before {
+      content: '';
+      position: absolute;
+      top: -40%; right: -5%;
+      width: 600px; height: 600px;
+      border: 1px solid rgba(201,168,76,0.05);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    #comercial::after {
+      content: '';
+      position: absolute;
+      bottom: -50%; left: 5%;
+      width: 400px; height: 400px;
+      border: 1px solid rgba(201,168,76,0.04);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .comercial-inner {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .comercial-inner .section-tag { margin-bottom: 14px; }
+    .comercial-inner h2 {
+      font-family: var(--ff-titulo);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: var(--branco);
+      margin-bottom: 16px;
+      line-height: 1.15;
+    }
+    .comercial-inner h2 span { color: var(--dourado); }
+    .comercial-inner > p {
+      color: rgba(255,255,255,0.46);
+      font-size: 1rem;
+      margin-bottom: 36px;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.8;
+    }
+    .comercial-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .comercial-info {
+      display: flex;
+      gap: 48px;
+      justify-content: center;
+      margin-top: 48px;
+      padding-top: 36px;
+      border-top: 1px solid rgba(201,168,76,0.10);
+      flex-wrap: wrap;
+    }
+    .comercial-info-item { text-align: center; }
+    .comercial-info-item strong {
+      display: block;
+      font-family: var(--ff-titulo);
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--dourado);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .comercial-info-item span {
+      font-size: 0.67rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.28);
+    }
+
+    /* ══════════════════════════════════
+       CONTATO
+    ══════════════════════════════════ */
+    #contato {
+      background:
+        linear-gradient(rgba(247,245,243,0.93), rgba(247,245,243,0.93)),
+        url('images/bg-contato.jpg') center / cover no-repeat;
+      background-attachment: scroll, fixed;
+    }
+
+    .contato-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+    .contato-text .section-tag { margin: 0 0 12px; }
+    .contato-text h2 {
+      font-family: var(--ff-titulo);
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 700;
+      color: var(--texto);
+      margin-bottom: 14px;
+      text-align: left;
+    }
+    .contato-text h2 span { color: var(--dourado); }
+    .contato-text > p {
+      color: var(--texto-leve);
+      font-size: 0.96rem;
+      line-height: 1.85;
+      margin-bottom: 32px;
+    }
+    .contato-itens {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .contato-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .contato-icon {
+      width: 44px; height: 44px;
+      border-radius: 10px;
+      background: var(--dourado-pale);
+      border: 1px solid rgba(201,168,76,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      color: var(--dourado-2);
+      flex-shrink: 0;
+    }
+    .contato-item-txt strong {
+      display: block;
+      font-size: 0.63rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--texto-leve);
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+    .contato-item-txt a,
+    .contato-item-txt span {
+      font-size: 0.92rem;
+      color: var(--texto);
+      transition: color var(--tr);
+    }
+    .contato-item-txt a:hover { color: var(--dourado); }
+
+    .sociais { display: flex; gap: 10px; }
+    .social-btn {
+      width: 42px; height: 42px;
+      border-radius: 10px;
+      background: var(--branco);
+      border: 1px solid var(--cinza);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+      color: var(--texto-leve);
+      transition: all var(--tr);
+    }
+    .social-btn:hover {
+      background: var(--preto);
+      color: var(--branco);
+      transform: translateY(-2px);
+    }
+
+    /* box direita */
+    .contato-box {
+      background: var(--preto);
+      border-radius: 20px;
+      padding: 52px 44px;
+      position: relative;
+      overflow: hidden;
+    }
+    .contato-box::before {
+      content: '';
+      position: absolute;
+      top: -30%; right: -20%;
+      width: 280px; height: 280px;
+      border: 1px solid rgba(201,168,76,0.06);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .contato-box-icon {
+      font-size: 2.4rem;
+      color: var(--dourado);
+      margin-bottom: 16px;
+      display: block;
+    }
+    .contato-box h3 {
+      font-family: var(--ff-titulo);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--branco);
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+    .contato-box p {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.42);
+      line-height: 1.8;
+      margin-bottom: 28px;
+    }
+    .contato-box-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--dourado);
+      color: var(--preto);
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      transition: all var(--tr);
+    }
+    .contato-box-cta:hover {
+      background: var(--dourado-2);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(201,168,76,0.35);
+    }
+    .contato-box-horario {
+      margin-top: 28px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.07);
+    }
+    .contato-box-horario p {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.28);
+      margin-bottom: 4px;
+    }
+    .contato-box-horario strong {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.58);
+      display: block;
+    }
+
+    /* ══════════════════════════════════
+       FOOTER
+    ══════════════════════════════════ */
+    #footer { background: var(--preto-2); }
+    .footer-top {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--dourado), transparent);
+    }
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 36px 0 28px;
+      gap: 20px;
+    }
+    .footer-brand { display: flex; align-items: center; gap: 14px; }
+    .footer-brand-icon {
+      width: 40px; height: 40px;
+      background: rgba(201,168,76,0.10);
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      color: var(--dourado);
+    }
+    .footer-brand-text strong {
+      display: block;
+      font-family: var(--ff-titulo);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--branco);
+    }
+    .footer-brand-text span { font-size: 0.68rem; color: rgba(255,255,255,0.28); letter-spacing: 1px; }
+    .footer-info {
+      text-align: center;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.26);
+      line-height: 1.8;
+    }
+    .footer-info strong { color: rgba(255,255,255,0.5); }
+    .footer-sociais { display: flex; gap: 8px; }
+    .footer-social-btn {
+      width: 38px; height: 38px;
+      border-radius: 9px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.45);
+      transition: all var(--tr);
+    }
+    .footer-social-btn:hover {
+      background: var(--dourado);
+      color: var(--preto);
+      border-color: var(--dourado);
+    }
+    .footer-copy {
+      text-align: center;
+      font-size: 0.68rem;
+      color: rgba(255,255,255,0.14);
+      padding-bottom: 20px;
+    }
+
+    /* ══════════════════════════════════
+       FLUTUANTES
+    ══════════════════════════════════ */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 28px; right: 28px;
+      z-index: 900;
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      background: #25D366;
+      color: var(--branco);
+      font-size: 1.6rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.35);
+      transition: transform var(--tr), box-shadow var(--tr);
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 28px rgba(37,211,102,0.5);
+    }
+    .scroll-top {
+      position: fixed;
+      bottom: 28px; left: 28px;
+      z-index: 900;
+      width: 42px; height: 42px;
+      border-radius: 50%;
+      background: var(--preto);
+      color: var(--branco);
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity var(--tr), transform var(--tr);
+      border: none;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    }
+    .scroll-top.show { opacity: 1; pointer-events: all; }
+    .scroll-top:hover { transform: translateY(-2px); }
+
+    /* ══════════════════════════════════
+       ANIMAÇÕES
+    ══════════════════════════════════ */
+    .fade-up {
+      opacity: 0; transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-up.visible { opacity: 1; transform: none; }
+    .fade-left {
+      opacity: 0; transform: translateX(-28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-left.visible { opacity: 1; transform: none; }
+    .fade-right {
+      opacity: 0; transform: translateX(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-right.visible { opacity: 1; transform: none; }
+    .fade-scale {
+      opacity: 0; transform: scale(0.94);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-scale.visible { opacity: 1; transform: none; }
+    .d1 { transition-delay: 0.05s; }
+    .d2 { transition-delay: 0.12s; }
+    .d3 { transition-delay: 0.19s; }
+    .d4 { transition-delay: 0.26s; }
+
+    /* ══════════════════════════════════
+       RESPONSIVIDADE — 320px → 4K
+    ══════════════════════════════════ */
+
+    /* ── ULTRAWIDE / 4K (≥2560px) ── */
+    @media (min-width: 2560px) {
+      .container { max-width: 2000px; }
+      section { padding: 130px 0; }
+      .section-title { font-size: 4.5rem; }
+      .hero-text h1 { font-size: 8rem; }
+      .hero-text h2 { font-size: 1.3rem; max-width: 640px; }
+      .logo-img { height: 64px; }
+      .dif-item i { font-size: 2rem; }
+      .dif-item strong { font-size: 1.2rem; }
+      .hero-card { max-width: 480px; padding: 64px 52px; }
+      .sobre-box { padding: 72px 56px; }
+    }
+
+    /* ── FULL HD / 2K (≥1920px) ── */
+    @media (min-width: 1920px) {
+      .container { max-width: 1600px; }
+      section { padding: 110px 0; }
+      .section-title { font-size: 3.6rem; }
+      .hero-text h1 { font-size: 6rem; }
+      .hero-text h2 { font-size: 1.15rem; max-width: 560px; }
+      .logo-img { height: 54px; }
+      .hero-card { max-width: 440px; padding: 58px 48px; }
+      .sobre-box { padding: 64px 52px; }
+    }
+
+    /* ── XL WIDE (≥1440px) ── */
+    @media (min-width: 1440px) {
+      .container { max-width: 1340px; }
+    }
+
+    /* ── LAPTOP WIDE (≤1399px) ── */
+    @media (max-width: 1399px) {
+      .container { max-width: 1180px; }
+    }
+
+    /* ── LAPTOP (≤1199px) ── */
+    @media (max-width: 1199px) {
+      .container { max-width: 960px; }
+      .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero-text h1 { font-size: clamp(3rem, 5.5vw, 4.4rem); }
+    }
+
+    /* ── TABLET L (≤1023px) — iPad Pro, Surface ── */
+    @media (max-width: 1023px) {
+      :root { --header-h: 68px; }
+
+      /* desativa parallax em tablet/mobile */
+      #sobre, #servicos, #mvv, #comercial, #contato {
+        background-attachment: scroll, scroll;
+      }
+
+      nav .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .logo-img { height: 60px; }
+      section { padding: 80px 0; }
+
+      /* hero */
+      .hero-inner { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+      .hero-text h2 { margin-left: auto; margin-right: auto; }
+      .hero-btns { justify-content: center; }
+      .hero-stats { justify-content: center; }
+      .hero-visual { order: -1; }
+      .hero-card { max-width: 420px; }
+
+      /* diferenciais */
+      .dif-grid { grid-template-columns: repeat(2, 1fr); }
+      .dif-item:nth-child(2) { border-right: none; }
+      .dif-item:nth-child(3),
+      .dif-item:nth-child(4) { border-top: 1px solid rgba(255,255,255,0.07); }
+
+      /* sobre */
+      .sobre-grid { grid-template-columns: 1fr; gap: 40px; }
+      .sobre-visual { max-width: 500px; margin: 0 auto; }
+      .sobre-badge { bottom: 10px; right: 10px; }
+      .sobre-text .section-tag { margin: 0 auto 12px; }
+      .sobre-text h2 { text-align: center; }
+      .sobre-text .btn { display: block; width: fit-content; margin: 0 auto; }
+
+      /* grids */
+      .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+      .servicos-grid { grid-template-columns: repeat(2, 1fr); }
+      .mvv-grid { grid-template-columns: repeat(2, 1fr); }
+      .mvv-card:last-child:nth-child(odd) { grid-column: 1 / -1; max-width: 420px; margin: 0 auto; }
+
+      /* mercado */
+      .mercado-grid { grid-template-columns: 1fr; gap: 40px; }
+      .mercado-text .section-tag { margin: 0 auto 12px; }
+      .mercado-text h2 { text-align: center; }
+      .mercado-text > p { text-align: center; }
+      .mercado-segs { max-width: 480px; margin: 0 auto 24px; }
+      .mercado-features { max-width: 600px; margin: 0 auto; }
+
+      /* contato */
+      .contato-grid { grid-template-columns: 1fr; gap: 40px; }
+      .contato-text .section-tag { margin: 0 auto 12px; }
+      .contato-text h2 { text-align: center; }
+      .contato-text > p { text-align: center; }
+      .contato-itens { max-width: 460px; margin: 0 auto 24px; }
+      .sociais { justify-content: center; }
+
+      /* footer */
+      .footer-inner { flex-wrap: wrap; justify-content: center; gap: 24px; }
+      .footer-info { max-width: 500px; }
+    }
+
+    /* ── TABLET M (≤820px) — iPad Mini, iPad Air ── */
+    @media (max-width: 820px) {
+      .hero-card { padding: 44px 32px; max-width: 360px; }
+      .sobre-box { padding: 44px 36px; }
+      .portfolio-card { padding: 30px 20px; }
+      .servico-card { padding: 32px 24px; }
+      .mvv-card { padding: 32px 24px; }
+      .hero-text h1 { font-size: clamp(2.8rem, 8vw, 3.6rem); }
+      .vitrine-cta { padding: 44px 40px; }
+      .vitrine-cta-deco { font-size: 5rem; }
+    }
+
+    /* ── MOBILE L (≤768px) ── */
+    @media (max-width: 768px) {
+      section { padding: 64px 0; }
+      .container { padding: 0 1.25rem; }
+      .logo-img { height: 48px; }
+
+      .section-title { font-size: clamp(1.8rem, 6vw, 2.4rem); }
+      .section-desc { font-size: 0.94rem; margin-bottom: 36px; }
+
+      .hero-text h1 { font-size: clamp(2.6rem, 10vw, 3.8rem); }
+      .hero-text h2 { font-size: 0.95rem; }
+      .hero-card { padding: 40px 28px; }
+
+      .portfolio-grid { grid-template-columns: 1fr; }
+      .servicos-grid { grid-template-columns: 1fr; }
+      .mvv-grid { grid-template-columns: 1fr; }
+
+      .mercado-segs { grid-template-columns: repeat(2, 1fr); max-width: 100%; }
+
+      .comercial-inner h2 { font-size: clamp(1.8rem, 5vw, 2.4rem); }
+      .comercial-info { gap: 20px; flex-wrap: wrap; }
+
+      .contato-box { padding: 40px 32px; }
+
+      .footer-inner { flex-direction: column; align-items: center; text-align: center; gap: 16px; }
+      .footer-brand { flex-direction: column; }
+      .footer-info { font-size: 0.75rem; }
+      .footer-copy { font-size: 0.65rem; }
+    }
+
+    /* ── MOBILE M (≤580px) ── */
+    @media (max-width: 580px) {
+      section { padding: 52px 0; }
+      .container { padding: 0 1.1rem; }
+
+      .vitrine-cta { flex-direction: column; padding: 40px 28px; gap: 24px; }
+      .vitrine-cta-deco { display: none; }
+      .vitrine-cta-content p { max-width: 100%; }
+
+      .hero-btns { flex-direction: column; align-items: center; }
+      .hero-btns .btn { width: 100%; max-width: 300px; justify-content: center; }
+      .hero-stats { gap: 16px; flex-wrap: wrap; justify-content: center; }
+      .hero-card { padding: 32px 18px; }
+      .hero-card-tiers { grid-template-columns: repeat(2, 1fr); }
+
+      .dif-item { padding: 22px 12px; }
+
+      .sobre-badge { bottom: 10px; right: 10px; width: 76px; height: 76px; }
+      .sobre-badge strong { font-size: 1.3rem; }
+
+      .mercado-segs { grid-template-columns: 1fr; }
+
+      .comercial-btns { flex-direction: column; align-items: center; }
+      .comercial-btns .btn { width: 100%; max-width: 300px; justify-content: center; }
+      .comercial-info-item strong { font-size: 1.5rem; }
+
+      .contato-box { padding: 32px 22px; }
+      .contato-box h3 { font-size: 1.2rem; }
+    }
+
+    /* ── MOBILE S (≤480px) ── */
+    @media (max-width: 480px) {
+      :root { --header-h: 60px; }
+      section { padding: 44px 0; }
+      .logo-img { height: 40px; }
+
+      .servico-card, .mvv-card { padding: 28px 20px; }
+      .portfolio-card { padding: 28px 18px; }
+      .mercado-feature { padding: 16px; }
+
+      .hero-card { max-width: 100%; }
+      .hero-eyebrow { font-size: 0.62rem; letter-spacing: 1.5px; padding: 0.35rem 0.9rem; }
+
+      .dif-item strong { font-size: 0.9rem; }
+      .dif-item span { font-size: 0.75rem; }
+
+      .sobre-box { padding: 40px 28px; }
+      .sobre-box-brand { font-size: 1.3rem; }
+
+      .contato-box { padding: 28px 20px; }
+      .contato-box-cta { width: 100%; justify-content: center; }
+
+      .whatsapp-float { bottom: 18px; right: 18px; width: 50px; height: 50px; font-size: 1.4rem; }
+      .scroll-top { bottom: 18px; left: 18px; width: 38px; height: 38px; }
+
+      .footer-inner { padding: 28px 0 20px; }
+    }
+
+    /* ── MOBILE XS (≤360px) ── */
+    @media (max-width: 360px) {
+      :root { --header-h: 56px; }
+      .container { padding: 0 0.875rem; }
+      .logo-img { height: 34px; }
+
+      .btn { font-size: 0.78rem; padding: 0.75rem 1.3rem; }
+      .section-title { font-size: 1.6rem; }
+      .hero-text h1 { font-size: 2.2rem; }
+      .hero-text h2 { font-size: 0.86rem; }
+
+      .dif-grid { grid-template-columns: 1fr; }
+      .dif-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.07); }
+      .dif-item:last-child { border-bottom: none; }
+
+      .hero-card { padding: 28px 16px; }
+      .hero-card h3 { font-size: 1.1rem; }
+      .hero-card p { font-size: 0.78rem; }
+
+      .sobre-box { padding: 32px 20px; }
+      .contato-box { padding: 24px 16px; }
+
+      .footer-info { font-size: 0.7rem; }
+      .footer-copy { font-size: 0.6rem; }
+    }
+
+    /* ── LANDSCAPE BAIXO (altura ≤500px) ── */
+    @media (max-height: 500px) and (orientation: landscape) {
+      #hero { min-height: auto; padding: calc(var(--header-h) + 20px) 0 40px; }
+      .hero-card { display: none; }
+    }
+
+    /* ── REDUZIR MOVIMENTO ── */
+    @media (prefers-reduced-motion: reduce) {
+      .fade-up, .fade-left, .fade-right, .fade-scale { opacity: 1; transform: none; transition: none; }
+      .hero-card { animation: none; }
+      .hero-particle { display: none; }
+      .section-tag::after { display: none; }
+    }
+    /* ══ PAGE FADE-IN ══ */
+    body { animation: pageIn .6s ease both; }
+    @keyframes pageIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ══ SHIMMER NOS SECTION-TAG ══ */
+    .section-tag {
+      position: relative;
+      overflow: hidden;
+    }
+    .section-tag::after {
+      content: '';
+      position: absolute;
+      top: 0; left: -120%;
+      width: 60%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.45), transparent);
+      animation: tagShimmer 3.5s ease-in-out infinite;
+    }
+    @keyframes tagShimmer {
+      0%   { left: -120%; }
+      40%  { left: 160%; }
+      100% { left: 160%; }
+    }
+
+    /* ══ RIPPLE NOS BOTÕES ══ */
+    .btn { position: relative; overflow: hidden; }
+    .ripple-wave {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.28);
+      transform: scale(0);
+      animation: rippleAnim .65s linear;
+      pointer-events: none;
+    }
+    @keyframes rippleAnim {
+      to { transform: scale(4); opacity: 0; }
+    }
+
+    /* ══ PARTÍCULAS HERO ══ */
+    .hero-particle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(201,168,76,0.18);
+      pointer-events: none;
+      animation: particleFloat linear infinite;
+    }
+    @keyframes particleFloat {
+      0%   { transform: translateY(0) rotate(0deg); opacity: 0; }
+      10%  { opacity: 1; }
+      90%  { opacity: .6; }
+      100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+    }
+
+    /* ══ TILT — transição suave ao sair ══ */
+    .servico-card, .portfolio-card, .mvv-card, .mercado-feature {
+      transition: transform .15s ease, box-shadow var(--tr), border-color var(--tr),
+                  background var(--tr), background-image .1s ease;
+    }
+    .servico-card:not(:hover), .portfolio-card:not(:hover),
+    .mvv-card:not(:hover), .mercado-feature:not(:hover) {
+      transition: transform .45s ease, box-shadow var(--tr), border-color var(--tr),
+                  background var(--tr);
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Barra de progresso de scroll -->
+  <div id="scroll-progress"></div>
+
+  <!-- ══════ HEADER ══════ -->
+  <header id="header">
+    <div class="container header-inner">
+      <a href="#hero" class="logo-wrap" aria-label="Estrela do Sul — início">
+        <img src="images/logo.png" alt="Estrela do Sul" class="logo-img">
+      </a>
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a href="#sobre">Sobre</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#mvv">Empresa</a>
+        <a href="#contato">Contato</a>
+        <a href="vitrine.html" class="nav-vitrine">
+          <i class="fa-solid fa-store"></i> Vitrine
+        </a>
+        <a href="https://wa.me/5511976122881" target="_blank" rel="noopener noreferrer" class="nav-cta">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- nav mobile -->
+  <nav id="navMenu" aria-label="Menu mobile">
+    <a href="#sobre">Sobre</a>
+    <a href="#portfolio">Portfólio</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#mvv">Empresa</a>
+    <a href="#contato">Contato</a>
+    <a href="vitrine.html" class="nav-vitrine">
+      <i class="fa-solid fa-store"></i> Vitrine Online
+    </a>
+    <a href="https://wa.me/5511976122881" target="_blank" rel="noopener noreferrer" class="nav-cta">
+      <i class="fa-brands fa-whatsapp"></i> Falar no WhatsApp
+    </a>
+  </nav>
+
+  <!-- ══════ HERO ══════ -->
+  <section id="hero" aria-label="Apresentação">
+    <div class="hero-deco" aria-hidden="true">
+      <div class="hero-deco-dot a"></div>
+      <div class="hero-deco-dot b"></div>
+      <div class="hero-deco-dot c"></div>
+      <div class="hero-line"></div>
+    </div>
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <div class="hero-eyebrow">
+            <i class="fa-solid fa-wine-bottle"></i>
+            Distribuição de vinhos — Guarulhos, SP
+          </div>
+          <h1>Estrela do <span>Sul</span></h1>
+          <h2>Vinhos selecionados, distribuição eficiente e parcerias de confiança.</h2>
+          <div class="hero-btns">
+            <a href="https://wa.me/5511976122881" target="_blank" rel="noopener noreferrer" class="btn btn-dourado">
+              <i class="fa-brands fa-whatsapp"></i> Falar conosco
+            </a>
+            <a href="vitrine.html" class="btn btn-vitrine">
+              <i class="fa-solid fa-store"></i> Ver Vitrine
+            </a>
+            <a href="#portfolio" class="btn btn-outline-branco">
+              Ver portfólio <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <strong class="count-num" data-target="2021" data-from="2018">2021</strong>
+              <span>Fundação</span>
+            </div>
+            <div class="hero-stat">
+              <strong class="count-num" data-target="4" data-from="0">4</strong>
+              <span>Linhas de vinho</span>
+            </div>
+            <div class="hero-stat">
+              <strong>B2B</strong>
+              <span>Distribuição</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-card" aria-hidden="true">
+            <div class="hero-card-icon">
+              <i class="fa-solid fa-wine-glass-empty"></i>
+            </div>
+            <div class="hero-card-label">Linha exclusiva</div>
+            <h3>Família Millán</h3>
+            <p>Rótulos selecionados com foco em procedência, excelência e experiência para diferentes perfis de consumo.</p>
+            <div class="hero-card-tiers">
+              <div class="hero-card-tier">Vinhos de entrada</div>
+              <div class="hero-card-tier">Gama média</div>
+              <div class="hero-card-tier">Premium</div>
+              <div class="hero-card-tier">Ultra premium</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ DIFERENCIAIS ══════ -->
+  <section id="diferenciais" aria-label="Nossos diferenciais">
+    <div class="container">
+      <div class="dif-grid">
+        <div class="dif-item fade-scale d1">
+          <i class="fa-solid fa-handshake"></i>
+          <strong>Confiança</strong>
+          <span>Base de cada parceria</span>
+        </div>
+        <div class="dif-item fade-scale d2">
+          <i class="fa-solid fa-bolt"></i>
+          <strong>Eficiência</strong>
+          <span>Operação dinâmica e ágil</span>
+        </div>
+        <div class="dif-item fade-scale d3">
+          <i class="fa-solid fa-medal"></i>
+          <strong>Qualidade</strong>
+          <span>Portfólio cuidadosamente selecionado</span>
+        </div>
+        <div class="dif-item fade-scale d4">
+          <i class="fa-solid fa-chart-line"></i>
+          <strong>Crescimento</strong>
+          <span>Sustentável e de longo prazo</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ SOBRE ══════ -->
+  <section id="sobre">
+    <div class="container">
+      <div class="sobre-grid">
+        <div class="sobre-visual fade-left">
+          <div class="sobre-box">
+            <i class="fa-solid fa-star sobre-box-icon"></i>
+            <div class="sobre-box-brand">Estrela do Sul</div>
+            <div class="sobre-box-sub">Comércio de Bebidas · Guarulhos, SP</div>
+            <p>"Desde 2021, construímos parcerias sólidas com base em confiança, eficiência operacional e compromisso com a qualidade."</p>
+          </div>
+          <div class="sobre-badge">
+            <strong>2021</strong>
+            <span>Desde</span>
+          </div>
+        </div>
+
+        <div class="sobre-text fade-right">
+          <span class="section-tag">Nossa história</span>
+          <h2>Parcerias construídas com <span>confiança e excelência</span></h2>
+          <p>A Estrela do Sul Comércio de Bebidas LTDA é uma empresa fundada em <strong>2021</strong>, com atuação na distribuição de vinhos no Brasil. Com presença estratégica e operação dinâmica, vem consolidando sua atuação por meio de parcerias comerciais sólidas e um portfólio cuidadosamente desenvolvido.</p>
+          <p>Desde sua criação, mantém como pilares a <strong>confiança, a eficiência operacional</strong> e o compromisso com a qualidade, construindo relações consistentes com clientes e parceiros em diferentes segmentos do mercado.</p>
+
+          <div class="sobre-highlights">
+            <div class="sobre-highlight">
+              <i class="fa-solid fa-check"></i>
+              Distribuição especializada em vinhos selecionados
+            </div>
+            <div class="sobre-highlight">
+              <i class="fa-solid fa-check"></i>
+              Linha exclusiva Família Millán
+            </div>
+            <div class="sobre-highlight">
+              <i class="fa-solid fa-check"></i>
+              Atendimento a restaurantes, varejo e eventos
+            </div>
+            <div class="sobre-highlight">
+              <i class="fa-solid fa-check"></i>
+              Condições comerciais personalizadas
+            </div>
+          </div>
+
+          <a href="https://wa.me/5511976122881" target="_blank" rel="noopener noreferrer" class="btn btn-dourado">
+            <i class="fa-brands fa-whatsapp"></i> Falar conosco
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ PORTFÓLIO ══════ -->
+  <section id="portfolio">
+    <div class="container">
+      <span class="section-tag">Linha Família Millán</span>
+      <h2 class="section-title">Nosso <span>portfólio</span></h2>
+      <p class="section-desc">Rótulos selecionados com foco em procedência, excelência e experiência — para diferentes perfis de consumo.</p>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-card fade-scale d1">
+          <div class="portfolio-tier">Categoria</div>
+          <i class="fa-solid fa-wine-bottle portfolio-icon"></i>
+          <h3>Vinhos de entrada</h3>
+          <p>Opções acessíveis com qualidade e personalidade, ideais para apresentar a linha Família Millán a novos consumidores.</p>
+        </div>
+        <div class="portfolio-card fade-scale d2">
+          <div class="portfolio-tier">Categoria</div>
+          <i class="fa-solid fa-wine-glass portfolio-icon"></i>
+          <h3>Gama média</h3>
+          <p>Equilíbrio entre custo e qualidade, com rótulos que proporcionam uma experiência diferenciada e consistente.</p>
+        </div>
+        <div class="portfolio-card destaque fade-scale d3">
+          <div class="portfolio-tier">Destaque</div>
+          <i class="fa-solid fa-star portfolio-icon"></i>
+          <h3>Premium</h3>
+          <p>Seleção cuidadosa de vinhos com alta complexidade, reconhecidos pela sua personalidade e procedência.</p>
+        </div>
+        <div class="portfolio-card fade-scale d4">
+          <div class="portfolio-tier">Exclusivo</div>
+          <i class="fa-solid fa-crown portfolio-icon"></i>
+          <h3>Ultra premium</h3>
+          <p>O topo do portfólio: rótulos raros e sofisticados, para os paladares mais exigentes e ocasiões especiais.</p>
+        </div>
+      </div>
+
+      <!-- CTA Vitrine -->
+      <div class="vitrine-cta fade-up">
+        <div class="vitrine-cta-content">
+          <span class="vitrine-cta-tag"><i class="fa-solid fa-circle-dot"></i> Online agora</span>
+          <h3>Explore nossa <span>Vitrine Digital</span></h3>
+          <p>Acesse o catálogo completo com todos os rótulos disponíveis, preços e condições comerciais. Solicite seu pedido diretamente pelo sistema, de onde estiver.</p>
+          <a href="vitrine.html" class="btn btn-dourado">
+            <i class="fa-solid fa-store"></i> Acessar Vitrine
+          </a>
+        </div>
+        <div class="vitrine-cta-deco" aria-hidden="true">
+          <i class="fa-solid fa-wine-glass-empty"></i>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════ SERVIÇOS ══════ -->
+  <section id="servicos">
+    <div class="container">
+      <span class="section-tag" style="color:rgba(255,255,255,0.38)">O que oferecemos</span>
+      <h2 class="section-title light">Nossos <span>serviços</span></h2>
+      <p class="section-desc light">Atendimento próximo e personalizado para cada perfil de cliente, com agilidade e compromisso em cada entrega.</p>
+
+      <div class="servicos-grid">
+        <div class="servico-card fade-up d1">
+          <div class="servico-icon"><i class="fa-solid fa-truck"></i></div>
+          <h3>Venda e distribuição</h3>
+          <p>Comercialização direta dos vinhos da linha Família Millán, com logística eficiente e entrega pontual para clientes em todo o Brasil.</p>
+        </div>
+        <div class="servico-card fade-up d2">
+          <div class="servico-icon"><i class="fa-solid fa-store"></i></div>
+          <h3>Atendimento comercial</h3>
+          <p>Suporte dedicado para estabelecimentos, redes varejistas e distribuidores, com condições e propostas personalizadas para cada parceiro.</p>
+        </div>
+        <div class="servico-card fade-up d3">
+          <div class="servico-icon"><i class="fa-solid fa-champagne-glasses"></i></div>
+          <h3>Fornecimento para eventos</h3>
+          <p>Soluções sob medida para eventos corporativos, gastronômicos e celebrações especiais, com curadoria e assessoria especializada.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ MERCADO ══════ -->
+  <section id="mercado">
+    <div class="container">
+      <div class="mercado-grid">
+        <div class="mercado-text fade-left">
+          <span class="section-tag">Mercado de atuação</span>
+          <h2>Atendemos diferentes <span>segmentos</span></h2>
+          <p>Nossa atuação abrange desde estabelecimentos especializados até operações de maior porte, com foco em organização, eficiência e excelência no atendimento a cada perfil de cliente.</p>
+          <div class="mercado-segs">
+            <div class="mercado-seg">
+              <i class="fa-solid fa-utensils"></i>
+              <span>Restaurantes e bares</span>
+            </div>
+            <div class="mercado-seg">
+              <i class="fa-solid fa-wine-glass-empty"></i>
+              <span>Adegas especializadas</span>
+            </div>
+            <div class="mercado-seg">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span>Varejo e supermercados</span>
+            </div>
+            <div class="mercado-seg">
+              <i class="fa-solid fa-building"></i>
+              <span>Distribuidores e atacadistas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mercado-features fade-right">
+          <div class="mercado-feature">
+            <div class="mercado-feature-icon"><i class="fa-solid fa-handshake"></i></div>
+            <div>
+              <h4>Parcerias sólidas</h4>
+              <p>Relações construídas com base em confiança e transparência, visando o crescimento mútuo de longo prazo.</p>
+            </div>
+          </div>
+          <div class="mercado-feature">
+            <div class="mercado-feature-icon"><i class="fa-solid fa-bolt"></i></div>
+            <div>
+              <h4>Atendimento personalizado</h4>
+              <p>Cada cliente recebe um atendimento próximo, com condições comerciais adaptadas ao seu perfil e volume.</p>
+            </div>
+          </div>
+          <div class="mercado-feature">
+            <div class="mercado-feature-icon"><i class="fa-solid fa-chart-line"></i></div>
+            <div>
+              <h4>Desenvolvimento contínuo</h4>
+              <p>Acompanhamento estratégico dos negócios, com foco no crescimento sustentável de cada parceria.</p>
+            </div>
+          </div>
+          <div class="mercado-feature">
+            <div class="mercado-feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div>
+              <h4>Transparência nas relações</h4>
+              <p>Operação clara e ética, com comunicação direta e honesta em todas as etapas do relacionamento comercial.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ MVV ══════ -->
+  <section id="mvv">
+    <div class="container">
+      <span class="section-tag">Nossa identidade</span>
+      <h2 class="section-title">Missão, <span>visão</span> e valores</h2>
+      <p class="section-desc">Os princípios que orientam cada decisão e cada parceria que construímos.</p>
+
+      <div class="mvv-grid">
+        <div class="mvv-card fade-scale d1">
+          <div class="mvv-icon"><i class="fa-solid fa-bullseye"></i></div>
+          <h3>Missão</h3>
+          <p>Atuar de forma estratégica na comercialização e distribuição de vinhos, oferecendo soluções eficientes, atendimento próximo e desenvolvimento contínuo dos negócios.</p>
+        </div>
+        <div class="mvv-card fade-scale d2">
+          <div class="mvv-icon"><i class="fa-solid fa-eye"></i></div>
+          <h3>Visão</h3>
+          <p>Ser referência na distribuição de vinhos, conectando oportunidades, mercados e parceiros com eficiência, consistência e visão de longo prazo.</p>
+        </div>
+        <div class="mvv-card fade-scale d3">
+          <div class="mvv-icon"><i class="fa-solid fa-gem"></i></div>
+          <h3>Valores</h3>
+          <ul class="mvv-values">
+            <li><i class="fa-solid fa-check"></i> Confiança como base de cada parceria</li>
+            <li><i class="fa-solid fa-check"></i> Compromisso com a qualidade do portfólio</li>
+            <li><i class="fa-solid fa-check"></i> Eficiência e agilidade na operação</li>
+            <li><i class="fa-solid fa-check"></i> Transparência nas relações comerciais</li>
+            <li><i class="fa-solid fa-check"></i> Foco no crescimento sustentável</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ CTA COMERCIAL ══════ -->
+  <section id="comercial" aria-label="Seja nosso parceiro">
+    <div class="container">
+      <div class="comercial-inner fade-up">
+        <span class="section-tag">Seja nosso parceiro</span>
+        <h2>Pronto para distribuir <span>vinhos de qualidade</span>?</h2>
+        <p>Entre em contato e saiba como tornar-se um parceiro distribuidor da Estrela do Sul com condições comerciais sob medida para o seu negócio.</p>
+        <div class="comercial-btns">
+          <a href="https://wa.me/5511976122881" target="_blank" rel="noopener noreferrer" class="btn btn-dourado">
+            <i class="fa-brands fa-whatsapp"></i> Solicitar proposta
+          </a>
+          <a href="mailto:operacional@estrelladosul.com" class="btn btn-outline-branco">
+            <i class="fa-solid fa-envelope"></i> Enviar e-mail
+          </a>
+        </div>
+        <div class="comercial-info">
+          <div class="comercial-info-item">
+            <strong class="count-num" data-target="2021" data-from="2018">2021</strong>
+            <span>Fundação</span>
+          </div>
+          <div class="comercial-info-item">
+            <strong class="count-num" data-target="4" data-from="0">4</strong>
+            <span>Linhas de vinho</span>
+          </div>
+          <div class="comercial-info-item">
+            <strong>B2B</strong>
+            <span>Distribuição</span>
+          </div>
+          <div class="comercial-info-item">
+            <strong class="count-num" data-target="100" data-suffix="%" data-from="0">100%</strong>
+            <span>Dedicação</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ CONTATO ══════ -->
+  <section id="contato">
+    <div class="container">
+      <div class="contato-grid">
+        <div class="contato-text fade-left">
+          <span class="section-tag">Fale conosco</span>
+          <h2>Entre em <span>contato</span></h2>
+          <p>Estamos prontos para apresentar nosso portfólio e construir uma parceria com você. Fale diretamente com nossa equipe comercial.</p>
+
+          <div class="contato-itens">
+            <div class="contato-item">
+              <div class="contato-icon"><i class="fa-brands fa-whatsapp"></i></div>
+              <div class="contato-item-txt">
+                <strong>WhatsApp</strong>
+                <a href="https://wa.me/5511976122881" target="_blank" rel="noopener noreferrer">(11) 97612-2881</a>
+              </div>
+            </div>
+            <div class="contato-item">
+              <div class="contato-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div class="contato-item-txt">
+                <strong>E-mail</strong>
+                <a href="mailto:operacional@estrelladosul.com">operacional@estrelladosul.com</a>
+              </div>
+            </div>
+            <div class="contato-item">
+              <div class="contato-icon"><i class="fa-brands fa-instagram"></i></div>
+              <div class="contato-item-txt">
+                <strong>Instagram</strong>
+                <a href="https://www.instagram.com/vinhosestreladosul/" target="_blank" rel="noopener noreferrer">@vinhosestreladosul</a>
+              </div>
+            </div>
+            <div class="contato-item">
+              <div class="contato-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="contato-item-txt">
+                <strong>Endereço</strong>
+                <span>Av. Natália Zarif, 660 — Jd. São Geraldo, Guarulhos/SP</span>
+              </div>
+            </div>
+            <div class="contato-item">
+              <div class="contato-icon"><i class="fa-solid fa-clock"></i></div>
+              <div class="contato-item-txt">
+                <strong>Horário</strong>
+                <span>Segunda a sexta, 09h00 às 18h00</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="sociais">
+            <a href="https://www.instagram.com/vinhosestreladosul/" target="_blank" rel="noopener noreferrer"
+               class="social-btn" aria-label="Instagram Estrela do Sul">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/5511976122881" target="_blank" rel="noopener noreferrer"
+               class="social-btn" aria-label="WhatsApp Estrela do Sul">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="fade-right">
+          <div class="contato-box">
+            <i class="contato-box-icon fa-solid fa-wine-glass-empty"></i>
+            <h3>Solicite uma proposta comercial</h3>
+            <p>Atendemos restaurantes, bares, adegas, varejo, distribuidores e empresas de eventos. Fale com a nossa equipe e receba uma proposta personalizada para o seu negócio.</p>
+            <a href="https://wa.me/5511976122881" target="_blank" rel="noopener noreferrer" class="contato-box-cta">
+              <i class="fa-brands fa-whatsapp"></i> Chamar no WhatsApp
+            </a>
+            <div class="contato-box-horario">
+              <p>Horário de atendimento</p>
+              <strong>Segunda a sexta · 09h00 às 18h00</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ FOOTER ══════ -->
+  <footer id="footer">
+    <div class="footer-top"></div>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-brand-icon"><i class="fa-solid fa-star"></i></div>
+          <div class="footer-brand-text">
+            <strong>Estrela do Sul</strong>
+            <span>Comércio de Bebidas · Guarulhos, SP</span>
+          </div>
+        </div>
+        <div class="footer-info">
+          <strong>Estrela do Sul Comércio de Bebidas LTDA</strong><br>
+          CNPJ 42.590.292/0001-00 · Av. Natália Zarif, 660 — Jd. São Geraldo, Guarulhos/SP<br>
+          Segunda a sexta, 09h00 às 18h00
+        </div>
+        <div class="footer-sociais">
+          <a href="https://www.instagram.com/vinhosestreladosul/" target="_blank" rel="noopener noreferrer"
+             class="footer-social-btn" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://wa.me/5511976122881" target="_blank" rel="noopener noreferrer"
+             class="footer-social-btn" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <p class="footer-copy">© 2025 Estrela do Sul Comércio de Bebidas LTDA · CNPJ 42.590.292/0001-00</p>
+
+    <!-- Rodapé MonteSite - Atualização Automática -->
+    <div id="montesite-footer-badge"></div>
+    <script src="https://vaabpicspdbolvutnscp.supabase.co/functions/v1/get-footer-iframe"></script>
+  </footer>
+
+  <!-- WhatsApp flutuante -->
+  <a href="https://wa.me/5511976122881" target="_blank" rel="noopener noreferrer"
+     class="whatsapp-float" aria-label="WhatsApp Estrela do Sul">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Scroll top -->
+  <button class="scroll-top" id="scrollTop" aria-label="Voltar ao topo">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <script>
+    /* ── HEADER + SCROLL TOP + PROGRESS ── */
+    const header      = document.getElementById('header');
+    const scrollTop   = document.getElementById('scrollTop');
+    const progressBar = document.getElementById('scroll-progress');
+    window.addEventListener('scroll', () => {
+      const s = window.scrollY;
+      header.classList.toggle('scrolled', s > 60);
+      scrollTop.classList.toggle('show', s > 400);
+      const total = document.documentElement.scrollHeight - window.innerHeight;
+      progressBar.style.width = (s / total * 100) + '%';
+    }, { passive: true });
+    scrollTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    /* ── HAMBURGER ── */
+    const hamburger = document.getElementById('hamburger');
+    const navMenu   = document.getElementById('navMenu');
+    hamburger.addEventListener('click', () => {
+      const open = navMenu.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      hamburger.setAttribute('aria-expanded', open);
+    });
+    navMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        navMenu.classList.remove('open');
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    /* ── SCROLL ANIMATIONS ── */
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.fade-up, .fade-left, .fade-right, .fade-scale').forEach(el => observer.observe(el));
+
+    /* ── ACTIVE NAV ── */
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a:not(.nav-cta)');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(sec => { if (window.scrollY >= sec.offsetTop - 120) current = sec.id; });
+      navLinks.forEach(a => {
+        const active = a.getAttribute('href') === '#' + current;
+        a.style.color      = active ? 'var(--preto)' : '';
+        a.style.background = active ? 'var(--cinza-claro)' : '';
+      });
+    }, { passive: true });
+
+    /* ── RIPPLE NOS BOTÕES ── */
+    document.querySelectorAll('.btn').forEach(btn => {
+      btn.addEventListener('click', e => {
+        const r = document.createElement('span');
+        r.classList.add('ripple-wave');
+        const rect = btn.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        r.style.cssText = `width:${size}px;height:${size}px;left:${e.clientX - rect.left - size / 2}px;top:${e.clientY - rect.top - size / 2}px`;
+        btn.appendChild(r);
+        setTimeout(() => r.remove(), 700);
+      });
+    });
+
+    /* ── SPOTLIGHT + TILT NOS CARDS ── */
+    const tiltCards = document.querySelectorAll('.servico-card, .portfolio-card, .mvv-card, .mercado-feature');
+    tiltCards.forEach(card => {
+      const isDark = card.classList.contains('servico-card') || card.classList.contains('destaque');
+      const spotColor = isDark ? 'rgba(201,168,76,0.10)' : 'rgba(201,168,76,0.08)';
+
+      card.addEventListener('mousemove', e => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const cx = (x / rect.width - 0.5);
+        const cy = (y / rect.height - 0.5);
+
+        card.style.transform = `perspective(900px) rotateY(${cx * 7}deg) rotateX(${-cy * 7}deg) translateY(-5px)`;
+        card.style.backgroundImage = `radial-gradient(circle 180px at ${x}px ${y}px, ${spotColor}, transparent 70%)`;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+        card.style.backgroundImage = '';
+      });
+    });
+
+    /* ── CONTADOR ANIMADO ── */
+    function animCount(el) {
+      const target = +el.dataset.target;
+      const from   = +(el.dataset.from || 0);
+      const suffix = el.dataset.suffix || '';
+      const duration = 1600;
+      const startTime = performance.now();
+
+      function step(now) {
+        const progress = Math.min((now - startTime) / duration, 1);
+        const ease = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.round(from + (target - from) * ease) + suffix;
+        if (progress < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+
+    const countObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          animCount(e.target);
+          countObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.count-num').forEach(el => countObserver.observe(el));
+
+    /* ── PARTÍCULAS NO HERO ── */
+    (function () {
+      const hero = document.getElementById('hero');
+      if (!hero) return;
+      for (let i = 0; i < 18; i++) {
+        const p = document.createElement('div');
+        p.classList.add('hero-particle');
+        const size = Math.random() * 5 + 2;
+        const dur  = Math.random() * 12 + 10;
+        const del  = Math.random() * 10;
+        p.style.cssText = `
+          width:${size}px; height:${size}px;
+          left:${Math.random() * 100}%;
+          bottom:-10px;
+          animation-duration:${dur}s;
+          animation-delay:-${del}s;
+        `;
+        hero.appendChild(p);
+      }
+    })();
+
+    /* ── PARALLAX NOS DOTS DO HERO ── */
+    (function () {
+      const hero = document.getElementById('hero');
+      const dots = document.querySelectorAll('.hero-deco-dot');
+      if (!hero || !dots.length) return;
+
+      document.addEventListener('mousemove', e => {
+        const rect = hero.getBoundingClientRect();
+        if (rect.bottom < 0 || rect.top > window.innerHeight) return;
+        const x = (e.clientX / window.innerWidth - 0.5);
+        const y = (e.clientY / window.innerHeight - 0.5);
+        dots.forEach((dot, i) => {
+          const f = (i + 1) * 12;
+          dot.style.transform = `translate(${x * f}px, ${y * f}px)`;
+        });
+      });
+    })();
+
+    /* ── PARALLAX SCROLL NO HERO CARD ── */
+    (function () {
+      const card = document.querySelector('.hero-card');
+      if (!card) return;
+      window.addEventListener('scroll', () => {
+        const offset = window.scrollY * 0.12;
+        card.style.transform = `translateY(${-offset}px)`;
+      }, { passive: true });
+    })();
+
+  </script>
+</body>
+</html>
