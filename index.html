@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Estrela do Sul</title>
-  <meta name="description" content="Estrela do Sul Comércio de Bebidas — distribuição especializada de vinhos selecionados da linha Família Millán. Parcerias sólidas para restaurantes, varejo e distribuidores em todo o Brasil.">
+  <title>Estrella Do Sul</title>
+  <meta name="description" content="Estrella Do Sul Comércio de Bebidas — distribuição especializada de vinhos selecionados da linha Família Millán. Parcerias sólidas para restaurantes, varejo e distribuidores em todo o Brasil.">
   <meta name="robots" content="index, follow">
-  <meta name="author" content="Estrela do Sul Comércio de Bebidas LTDA">
+  <meta name="author" content="Estrella Do Sul Comércio de Bebidas LTDA">
   <meta name="theme-color" content="#1A1A1A">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Estrela do Sul">
+  <meta property="og:title" content="Estrella Do Sul">
   <meta property="og:description" content="Distribuição especializada de vinhos selecionados da linha Família Millán. Vinhos selecionados, distribuição eficiente e parcerias de confiança.">
   <meta property="og:image" content="images/logo.png">
   <meta property="og:locale" content="pt_BR">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Estrela do Sul">
+  <meta name="twitter:title" content="Estrella Do Sul">
   <meta name="twitter:description" content="Distribuição especializada de vinhos selecionados da linha Família Millán.">
   <meta name="twitter:image" content="images/logo.png">
 
@@ -36,8 +36,9 @@
 
   <style>
     :root {
-      --azul:         #7BA4B8;
-      --azul-escuro:  #5A8A9F;
+      --azul:         #7094A4;
+      --azul-escuro:  #4F7A8E;
+      --azul-pale:    #E8EFF3;
       --preto:        #1A1A1A;
       --preto-2:      #111111;
       --branco:       #FFFFFF;
@@ -91,7 +92,7 @@
       font-weight: 700;
       letter-spacing: 4px;
       text-transform: uppercase;
-      color: var(--dourado);
+      color: var(--azul);
     }
     .section-title {
       font-family: var(--ff-titulo);
@@ -102,7 +103,7 @@
       color: var(--texto);
       margin-bottom: 16px;
     }
-    .section-title span { color: var(--dourado); }
+    .section-title span { color: var(--azul); }
     .section-title.light { color: var(--branco); }
     .section-desc {
       text-align: center;
@@ -132,24 +133,24 @@
       transition: all var(--tr);
     }
     .btn-dourado {
-      background: var(--dourado);
-      color: var(--preto);
-      border-color: var(--dourado);
+      background: var(--azul);
+      color: var(--branco);
+      border-color: var(--azul);
     }
     .btn-dourado:hover {
-      background: var(--dourado-2);
-      border-color: var(--dourado-2);
+      background: var(--azul-escuro);
+      border-color: var(--azul-escuro);
       transform: translateY(-2px);
-      box-shadow: 0 8px 28px rgba(201,168,76,0.35);
+      box-shadow: 0 8px 28px rgba(112,148,164,0.35);
     }
     .btn-outline-branco {
-      background: rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.18);
       color: var(--branco);
-      border-color: rgba(255,255,255,0.50);
+      border-color: rgba(255,255,255,0.78);
     }
     .btn-outline-branco:hover {
-      background: rgba(255,255,255,0.20);
-      border-color: rgba(255,255,255,0.85);
+      background: rgba(255,255,255,0.30);
+      border-color: #ffffff;
       transform: translateY(-2px);
     }
     .btn-outline-escuro {
@@ -163,35 +164,34 @@
       transform: translateY(-2px);
     }
     .btn-vitrine {
-      background: rgba(201,168,76,0.10);
-      color: var(--dourado);
-      border-color: rgba(201,168,76,0.35);
+      background: rgba(112,148,164,0.12);
+      color: var(--azul);
+      border-color: rgba(112,148,164,0.40);
     }
     .btn-vitrine:hover {
-      background: var(--dourado);
-      color: var(--preto);
-      border-color: var(--dourado);
+      background: var(--azul);
+      color: var(--branco);
+      border-color: var(--azul);
       transform: translateY(-2px);
-      box-shadow: 0 8px 28px rgba(201,168,76,0.35);
     }
 
     /* ── NAV VITRINE ── */
     .nav-vitrine {
-      color: var(--dourado) !important;
+      color: var(--azul) !important;
       font-weight: 600 !important;
-      border: 1px solid rgba(201,168,76,0.28) !important;
-      background: rgba(201,168,76,0.06) !important;
+      border: 1px solid rgba(112,148,164,0.30) !important;
+      background: rgba(112,148,164,0.06) !important;
     }
     .nav-vitrine:hover {
-      background: rgba(201,168,76,0.14) !important;
-      color: var(--dourado-2) !important;
+      background: rgba(112,148,164,0.14) !important;
+      color: var(--azul-escuro) !important;
     }
     #navMenu .nav-vitrine {
-      color: var(--dourado) !important;
+      color: var(--azul) !important;
       font-weight: 600;
       border-bottom: 1px solid rgba(0,0,0,0.04) !important;
-      background: rgba(201,168,76,0.04) !important;
-      border-left: 3px solid var(--dourado);
+      background: rgba(112,148,164,0.05) !important;
+      border-left: 3px solid var(--azul);
       padding-left: 21px;
     }
 
@@ -332,7 +332,7 @@
       padding: 0.5rem 1.3rem !important;
       border-radius: 8px;
     }
-    .nav-cta:hover { background: var(--dourado) !important; color: var(--preto) !important; }
+    .nav-cta:hover { background: var(--azul) !important; color: var(--branco) !important; }
 
     .hamburger {
       display: none;
@@ -399,7 +399,7 @@
       position: relative;
       overflow: hidden;
       background:
-        linear-gradient(135deg, rgba(17,11,5,0.82) 0%, rgba(31,26,20,0.78) 40%, rgba(42,31,14,0.80) 100%),
+        linear-gradient(135deg, rgba(8,15,22,0.88) 0%, rgba(18,26,34,0.84) 40%, rgba(14,22,32,0.86) 100%),
         url('images/bg-hero.jpg') center / cover no-repeat;
     }
     .hero-deco {
@@ -413,7 +413,7 @@
       position: absolute;
       top: -30%; right: -10%;
       width: 700px; height: 700px;
-      border: 1px solid rgba(201,168,76,0.06);
+      border: 1px solid rgba(112,148,164,0.06);
       border-radius: 50%;
     }
     .hero-deco::after {
@@ -421,13 +421,13 @@
       position: absolute;
       bottom: -30%; left: -8%;
       width: 500px; height: 500px;
-      border: 1px solid rgba(201,168,76,0.04);
+      border: 1px solid rgba(112,148,164,0.04);
       border-radius: 50%;
     }
     .hero-deco-dot {
       position: absolute;
       border-radius: 50%;
-      background: rgba(201,168,76,0.05);
+      background: rgba(112,148,164,0.07);
     }
     .hero-deco-dot.a { width: 320px; height: 320px; top: 5%; right: 3%; }
     .hero-deco-dot.b { width: 180px; height: 180px; bottom: 10%; left: 2%; }
@@ -436,7 +436,7 @@
       position: absolute;
       top: 0; left: 50%;
       width: 1px; height: 100%;
-      background: linear-gradient(180deg, transparent, rgba(201,168,76,0.10), transparent);
+      background: linear-gradient(180deg, transparent, rgba(112,148,164,0.10), transparent);
     }
 
     .hero-inner {
@@ -453,15 +453,15 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      background: rgba(201,168,76,0.10);
-      border: 1px solid rgba(201,168,76,0.25);
+      background: rgba(112,148,164,0.10);
+      border: 1px solid rgba(112,148,164,0.25);
       border-radius: 100px;
       padding: 0.4rem 1.1rem;
       font-size: 0.7rem;
       font-weight: 600;
       letter-spacing: 2.5px;
       text-transform: uppercase;
-      color: var(--dourado);
+      color: var(--azul);
       margin-bottom: 24px;
     }
     .hero-eyebrow i { font-size: 0.8rem; }
@@ -475,7 +475,7 @@
       margin-bottom: 22px;
       letter-spacing: -1px;
     }
-    .hero-text h1 span { color: var(--dourado); }
+    .hero-text h1 span { color: var(--azul); }
 
     .hero-text h2 {
       font-family: var(--ff-corpo);
@@ -499,14 +499,14 @@
       display: flex;
       gap: 36px;
       padding-top: 36px;
-      border-top: 1px solid rgba(201,168,76,0.14);
+      border-top: 1px solid rgba(112,148,164,0.18);
     }
     .hero-stat strong {
       display: block;
       font-family: var(--ff-titulo);
       font-size: 1.75rem;
       font-weight: 700;
-      color: var(--dourado);
+      color: var(--azul);
       line-height: 1;
       margin-bottom: 4px;
     }
@@ -526,7 +526,7 @@
     }
     .hero-card {
       background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(201,168,76,0.18);
+      border: 1px solid rgba(112,148,164,0.18);
       border-radius: 20px;
       padding: 52px 40px;
       text-align: center;
@@ -541,14 +541,14 @@
     }
     .hero-card-icon {
       width: 80px; height: 80px;
-      background: rgba(201,168,76,0.10);
-      border: 1px solid rgba(201,168,76,0.24);
+      background: rgba(112,148,164,0.10);
+      border: 1px solid rgba(112,148,164,0.24);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 2rem;
-      color: var(--dourado);
+      color: var(--azul);
       margin: 0 auto 20px;
     }
     .hero-card-label {
@@ -556,7 +556,7 @@
       font-weight: 700;
       letter-spacing: 3px;
       text-transform: uppercase;
-      color: var(--dourado);
+      color: var(--azul);
       margin-bottom: 8px;
     }
     .hero-card h3 {
@@ -580,14 +580,21 @@
       gap: 8px;
     }
     .hero-card-tier {
-      background: rgba(201,168,76,0.08);
-      border: 1px solid rgba(201,168,76,0.16);
+      background: rgba(112,148,164,0.08);
+      border: 1px solid rgba(112,148,164,0.16);
       border-radius: 8px;
       padding: 8px 10px;
       font-size: 0.7rem;
       font-weight: 600;
       color: rgba(255,255,255,0.65);
       letter-spacing: 0.3px;
+      transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+      cursor: pointer;
+    }
+    .hero-card-tier:hover {
+      background: rgba(112,148,164,0.22);
+      border-color: rgba(112,148,164,0.45);
+      color: #ffffff;
     }
 
     /* ══════════════════════════════════
@@ -609,7 +616,7 @@
     .dif-item:last-child { border-right: none; }
     .dif-item i {
       font-size: 1.6rem;
-      color: var(--dourado);
+      color: var(--azul);
       margin-bottom: 14px;
       display: block;
     }
@@ -656,7 +663,7 @@
       position: absolute;
       top: -40%; right: -20%;
       width: 320px; height: 320px;
-      border: 1px solid rgba(201,168,76,0.06);
+      border: 1px solid rgba(112,148,164,0.08);
       border-radius: 50%;
       pointer-events: none;
     }
@@ -678,7 +685,7 @@
       font-weight: 700;
       letter-spacing: 3px;
       text-transform: uppercase;
-      color: var(--dourado);
+      color: var(--azul);
       margin-bottom: 24px;
     }
     .sobre-box p {
@@ -691,25 +698,25 @@
       position: absolute;
       bottom: -20px; right: -20px;
       width: 88px; height: 88px;
-      background: var(--dourado);
+      background: var(--azul);
       border-radius: 50%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 4px 20px rgba(201,168,76,0.4);
+      box-shadow: 0 4px 20px rgba(112,148,164,0.35);
     }
     .sobre-badge strong {
       font-family: var(--ff-titulo);
       font-size: 1.5rem;
       font-weight: 800;
-      color: var(--preto);
+      color: var(--branco);
       line-height: 1;
     }
     .sobre-badge span {
       font-size: 0.56rem;
       font-weight: 700;
-      color: var(--preto);
+      color: var(--branco);
       letter-spacing: 1px;
       text-transform: uppercase;
     }
@@ -724,7 +731,7 @@
       margin-bottom: 24px;
       text-align: left;
     }
-    .sobre-text h2 span { color: var(--dourado); }
+    .sobre-text h2 span { color: var(--azul); }
     .sobre-text p {
       color: var(--texto-leve);
       font-size: 0.96rem;
@@ -748,13 +755,13 @@
     }
     .sobre-highlight i {
       width: 28px; height: 28px;
-      background: var(--dourado-pale);
+      background: var(--azul-pale);
       border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 0.75rem;
-      color: var(--dourado-2);
+      color: var(--azul-escuro);
       flex-shrink: 0;
     }
 
@@ -783,7 +790,7 @@
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 3px;
-      background: linear-gradient(90deg, var(--dourado), var(--dourado-2));
+      background: linear-gradient(90deg, var(--azul), var(--azul-escuro));
       transform: scaleX(0);
       transition: transform 0.4s ease;
     }
@@ -794,7 +801,7 @@
     }
     .portfolio-card.destaque {
       background: var(--preto);
-      border-color: rgba(201,168,76,0.3);
+      border-color: rgba(112,148,164,0.35);
     }
     .portfolio-card.destaque::before { transform: scaleX(1); }
     .portfolio-card.destaque:hover { box-shadow: 0 12px 40px rgba(0,0,0,0.3); }
@@ -803,7 +810,7 @@
       font-weight: 700;
       letter-spacing: 3px;
       text-transform: uppercase;
-      color: var(--dourado);
+      color: var(--azul);
       margin-bottom: 12px;
     }
     .portfolio-icon {
@@ -812,7 +819,7 @@
       display: block;
     }
     .portfolio-card:not(.destaque) .portfolio-icon { color: var(--azul); }
-    .portfolio-card.destaque .portfolio-icon { color: var(--dourado); }
+    .portfolio-card.destaque .portfolio-icon { color: var(--azul); }
     .portfolio-card h3 {
       font-family: var(--ff-titulo);
       font-size: 1.1rem;
@@ -857,31 +864,31 @@
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 2px;
-      background: linear-gradient(90deg, var(--dourado), var(--dourado-2));
+      background: linear-gradient(90deg, var(--azul), var(--azul-escuro));
       transform: scaleX(0);
       transition: transform 0.4s ease;
     }
     .servico-card:hover::before { transform: scaleX(1); }
     .servico-card:hover {
       background: rgba(255,255,255,0.06);
-      border-color: rgba(201,168,76,0.18);
+      border-color: rgba(112,148,164,0.18);
       transform: translateY(-5px);
     }
     .servico-icon {
       width: 56px; height: 56px;
-      background: rgba(201,168,76,0.10);
+      background: rgba(112,148,164,0.12);
       border-radius: var(--radius);
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1.4rem;
-      color: var(--dourado);
+      color: var(--azul);
       margin-bottom: 20px;
       transition: all var(--tr);
     }
     .servico-card:hover .servico-icon {
-      background: var(--dourado);
-      color: var(--preto);
+      background: var(--azul);
+      color: var(--branco);
     }
     .servico-card h3 {
       font-family: var(--ff-titulo);
@@ -917,7 +924,7 @@
       margin-bottom: 20px;
       text-align: left;
     }
-    .mercado-text h2 span { color: var(--dourado); }
+    .mercado-text h2 span { color: var(--azul); }
     .mercado-text > p {
       color: var(--texto-leve);
       font-size: 0.96rem;
@@ -939,8 +946,8 @@
       gap: 10px;
       transition: all var(--tr);
     }
-    .mercado-seg:hover { border-color: var(--dourado); transform: translateX(4px); }
-    .mercado-seg i { font-size: 1.1rem; color: var(--dourado); flex-shrink: 0; }
+    .mercado-seg:hover { border-color: var(--azul); transform: translateX(4px); }
+    .mercado-seg i { font-size: 1.1rem; color: var(--azul); flex-shrink: 0; }
     .mercado-seg span { font-size: 0.86rem; font-weight: 500; color: var(--texto); }
 
     .mercado-features {
@@ -959,19 +966,19 @@
       transition: all var(--tr);
     }
     .mercado-feature:hover {
-      border-color: var(--dourado);
-      box-shadow: 0 4px 20px rgba(201,168,76,0.1);
+      border-color: var(--azul);
+      box-shadow: 0 4px 20px rgba(112,148,164,0.12);
     }
     .mercado-feature-icon {
       width: 44px; height: 44px;
-      background: var(--dourado-pale);
+      background: var(--azul-pale);
       border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
     }
-    .mercado-feature-icon i { font-size: 1.1rem; color: var(--dourado-2); }
+    .mercado-feature-icon i { font-size: 1.1rem; color: var(--azul-escuro); }
     .mercado-feature h4 {
       font-size: 0.9rem;
       font-weight: 700;
@@ -1013,19 +1020,19 @@
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 2px;
-      background: linear-gradient(90deg, var(--dourado), var(--dourado-2));
+      background: linear-gradient(90deg, var(--azul), var(--azul-escuro));
     }
     .mvv-card:hover { transform: translateY(-5px); box-shadow: var(--sombra); }
     .mvv-icon {
       width: 64px; height: 64px;
       border-radius: 50%;
-      background: var(--dourado-pale);
-      border: 1px solid rgba(201,168,76,0.25);
+      background: var(--azul-pale);
+      border: 1px solid rgba(112,148,164,0.25);
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1.5rem;
-      color: var(--dourado);
+      color: var(--azul);
       margin: 0 auto 20px;
     }
     .mvv-card h3 {
@@ -1054,7 +1061,7 @@
       color: var(--texto-leve);
       line-height: 1.5;
     }
-    .mvv-values li i { color: var(--dourado); font-size: 0.72rem; margin-top: 4px; flex-shrink: 0; }
+    .mvv-values li i { color: var(--azul); font-size: 0.72rem; margin-top: 4px; flex-shrink: 0; }
 
     /* ══════════════════════════════════
        CTA COMERCIAL
@@ -1100,7 +1107,7 @@
       margin-bottom: 16px;
       line-height: 1.15;
     }
-    .comercial-inner h2 span { color: var(--dourado); }
+    .comercial-inner h2 span { color: var(--azul); }
     .comercial-inner > p {
       color: rgba(255,255,255,0.46);
       font-size: 1rem;
@@ -1126,7 +1133,7 @@
       font-family: var(--ff-titulo);
       font-size: 1.75rem;
       font-weight: 700;
-      color: var(--dourado);
+      color: var(--azul);
       line-height: 1;
       margin-bottom: 4px;
     }
@@ -1163,7 +1170,7 @@
       margin-bottom: 14px;
       text-align: left;
     }
-    .contato-text h2 span { color: var(--dourado); }
+    .contato-text h2 span { color: var(--azul); }
     .contato-text > p {
       color: var(--texto-leve);
       font-size: 0.96rem;
@@ -1184,13 +1191,13 @@
     .contato-icon {
       width: 44px; height: 44px;
       border-radius: 10px;
-      background: var(--dourado-pale);
-      border: 1px solid rgba(201,168,76,0.2);
+      background: var(--azul-pale);
+      border: 1px solid rgba(112,148,164,0.22);
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1rem;
-      color: var(--dourado-2);
+      color: var(--azul-escuro);
       flex-shrink: 0;
     }
     .contato-item-txt strong {
@@ -1208,7 +1215,7 @@
       color: var(--texto);
       transition: color var(--tr);
     }
-    .contato-item-txt a:hover { color: var(--dourado); }
+    .contato-item-txt a:hover { color: var(--azul); }
 
     .sociais { display: flex; gap: 10px; }
     .social-btn {
@@ -1270,8 +1277,8 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      background: var(--dourado);
-      color: var(--preto);
+      background: var(--azul);
+      color: var(--branco);
       font-weight: 700;
       font-size: 0.9rem;
       padding: 1rem 2rem;
@@ -1279,9 +1286,9 @@
       transition: all var(--tr);
     }
     .contato-box-cta:hover {
-      background: var(--dourado-2);
+      background: var(--azul-escuro);
       transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(201,168,76,0.35);
+      box-shadow: 0 8px 24px rgba(112,148,164,0.35);
     }
     .contato-box-horario {
       margin-top: 28px;
@@ -1305,7 +1312,7 @@
     #footer { background: var(--preto-2); }
     .footer-top {
       height: 1px;
-      background: linear-gradient(90deg, transparent, var(--dourado), transparent);
+      background: linear-gradient(90deg, transparent, var(--azul), transparent);
     }
     .footer-inner {
       display: flex;
@@ -1354,9 +1361,9 @@
       transition: all var(--tr);
     }
     .footer-social-btn:hover {
-      background: var(--dourado);
-      color: var(--preto);
-      border-color: var(--dourado);
+      background: var(--azul);
+      color: var(--branco);
+      border-color: var(--azul);
     }
     .footer-copy {
       text-align: center;
@@ -1730,7 +1737,7 @@
     .hero-particle {
       position: absolute;
       border-radius: 50%;
-      background: rgba(201,168,76,0.18);
+      background: rgba(112,148,164,0.18);
       pointer-events: none;
       animation: particleFloat linear infinite;
     }
@@ -1762,12 +1769,11 @@
   <!-- ══════ HEADER ══════ -->
   <header id="header">
     <div class="container header-inner">
-      <a href="#hero" class="logo-wrap" aria-label="Estrela do Sul — início">
-        <img src="images/logo.png" alt="Estrela do Sul" class="logo-img">
+      <a href="#hero" class="logo-wrap" aria-label="Estrella Do Sul — início">
+        <img src="images/logo.png" alt="Estrella Do Sul" class="logo-img">
       </a>
       <nav class="nav-links" aria-label="Navegação principal">
         <a href="#sobre">Sobre</a>
-        <a href="#portfolio">Portfólio</a>
         <a href="#servicos">Serviços</a>
         <a href="#mvv">Empresa</a>
         <a href="#contato">Contato</a>
@@ -1787,7 +1793,6 @@
   <!-- nav mobile -->
   <nav id="navMenu" aria-label="Menu mobile">
     <a href="#sobre">Sobre</a>
-    <a href="#portfolio">Portfólio</a>
     <a href="#servicos">Serviços</a>
     <a href="#mvv">Empresa</a>
     <a href="#contato">Contato</a>
@@ -1812,9 +1817,9 @@
         <div class="hero-text">
           <div class="hero-eyebrow">
             <i class="fa-solid fa-wine-bottle"></i>
-            Distribuição de vinhos — Guarulhos, SP
+            Distribuidor Oficial · Família Millán
           </div>
-          <h1>Estrela do <span>Sul</span></h1>
+          <h1>Estrella Do <span>Sul</span></h1>
           <h2>Vinhos selecionados, distribuição eficiente e parcerias de confiança.</h2>
           <div class="hero-btns">
             <a href="https://wa.me/5511976122881" target="_blank" rel="noopener noreferrer" class="btn btn-dourado">
@@ -1823,19 +1828,8 @@
             <a href="vitrine.html" class="btn btn-vitrine">
               <i class="fa-solid fa-store"></i> Ver Vitrine
             </a>
-            <a href="#portfolio" class="btn btn-outline-branco">
-              Ver portfólio <i class="fa-solid fa-arrow-right"></i>
-            </a>
           </div>
           <div class="hero-stats">
-            <div class="hero-stat">
-              <strong class="count-num" data-target="2021" data-from="2018">2021</strong>
-              <span>Fundação</span>
-            </div>
-            <div class="hero-stat">
-              <strong class="count-num" data-target="4" data-from="0">4</strong>
-              <span>Linhas de vinho</span>
-            </div>
             <div class="hero-stat">
               <strong>B2B</strong>
               <span>Distribuição</span>
@@ -1852,90 +1846,12 @@
             <h3>Família Millán</h3>
             <p>Rótulos selecionados com foco em procedência, excelência e experiência para diferentes perfis de consumo.</p>
             <div class="hero-card-tiers">
-              <div class="hero-card-tier">Vinhos de entrada</div>
-              <div class="hero-card-tier">Gama média</div>
-              <div class="hero-card-tier">Premium</div>
-              <div class="hero-card-tier">Ultra premium</div>
+              <a href="vitrine.html" class="hero-card-tier">Vinhos de entrada</a>
+              <a href="vitrine.html" class="hero-card-tier">Gama média</a>
+              <a href="vitrine.html" class="hero-card-tier">Premium</a>
+              <a href="vitrine.html" class="hero-card-tier">Ultra premium</a>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════ DIFERENCIAIS ══════ -->
-  <section id="diferenciais" aria-label="Nossos diferenciais">
-    <div class="container">
-      <div class="dif-grid">
-        <div class="dif-item fade-scale d1">
-          <i class="fa-solid fa-handshake"></i>
-          <strong>Confiança</strong>
-          <span>Base de cada parceria</span>
-        </div>
-        <div class="dif-item fade-scale d2">
-          <i class="fa-solid fa-bolt"></i>
-          <strong>Eficiência</strong>
-          <span>Operação dinâmica e ágil</span>
-        </div>
-        <div class="dif-item fade-scale d3">
-          <i class="fa-solid fa-medal"></i>
-          <strong>Qualidade</strong>
-          <span>Portfólio cuidadosamente selecionado</span>
-        </div>
-        <div class="dif-item fade-scale d4">
-          <i class="fa-solid fa-chart-line"></i>
-          <strong>Crescimento</strong>
-          <span>Sustentável e de longo prazo</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════ SOBRE ══════ -->
-  <section id="sobre">
-    <div class="container">
-      <div class="sobre-grid">
-        <div class="sobre-visual fade-left">
-          <div class="sobre-box">
-            <i class="fa-solid fa-star sobre-box-icon"></i>
-            <div class="sobre-box-brand">Estrela do Sul</div>
-            <div class="sobre-box-sub">Comércio de Bebidas · Guarulhos, SP</div>
-            <p>"Desde 2021, construímos parcerias sólidas com base em confiança, eficiência operacional e compromisso com a qualidade."</p>
-          </div>
-          <div class="sobre-badge">
-            <strong>2021</strong>
-            <span>Desde</span>
-          </div>
-        </div>
-
-        <div class="sobre-text fade-right">
-          <span class="section-tag">Nossa história</span>
-          <h2>Parcerias construídas com <span>confiança e excelência</span></h2>
-          <p>A Estrela do Sul Comércio de Bebidas LTDA é uma empresa fundada em <strong>2021</strong>, com atuação na distribuição de vinhos no Brasil. Com presença estratégica e operação dinâmica, vem consolidando sua atuação por meio de parcerias comerciais sólidas e um portfólio cuidadosamente desenvolvido.</p>
-          <p>Desde sua criação, mantém como pilares a <strong>confiança, a eficiência operacional</strong> e o compromisso com a qualidade, construindo relações consistentes com clientes e parceiros em diferentes segmentos do mercado.</p>
-
-          <div class="sobre-highlights">
-            <div class="sobre-highlight">
-              <i class="fa-solid fa-check"></i>
-              Distribuição especializada em vinhos selecionados
-            </div>
-            <div class="sobre-highlight">
-              <i class="fa-solid fa-check"></i>
-              Linha exclusiva Família Millán
-            </div>
-            <div class="sobre-highlight">
-              <i class="fa-solid fa-check"></i>
-              Atendimento a restaurantes, varejo e eventos
-            </div>
-            <div class="sobre-highlight">
-              <i class="fa-solid fa-check"></i>
-              Condições comerciais personalizadas
-            </div>
-          </div>
-
-          <a href="https://wa.me/5511976122881" target="_blank" rel="noopener noreferrer" class="btn btn-dourado">
-            <i class="fa-brands fa-whatsapp"></i> Falar conosco
-          </a>
         </div>
       </div>
     </div>
@@ -1946,7 +1862,13 @@
     <div class="container">
       <span class="section-tag">Linha Família Millán</span>
       <h2 class="section-title">Nosso <span>portfólio</span></h2>
-      <p class="section-desc">Rótulos selecionados com foco em procedência, excelência e experiência — para diferentes perfis de consumo.</p>
+      <p class="section-desc">
+  Rótulos selecionados com foco em procedência, excelência e experiência — para diferentes perfis de consumo.
+  <br><span style="display:inline-flex; align-items:center; gap:6px; margin-top:8px; font-size:0.82rem; color:var(--texto-leve);">
+    <img src="https://flagcdn.com/16x12/ar.png" width="16" height="12" alt="Argentina" style="display:inline; border-radius:2px; vertical-align:middle; max-width:16px;">
+    Vinhos de origem argentina
+  </span>
+</p>
 
       <div class="portfolio-grid">
         <div class="portfolio-card fade-scale d1">
@@ -1972,6 +1894,29 @@
           <i class="fa-solid fa-crown portfolio-icon"></i>
           <h3>Ultra premium</h3>
           <p>O topo do portfólio: rótulos raros e sofisticados, para os paladares mais exigentes e ocasiões especiais.</p>
+        </div>
+      </div>
+
+      <!-- Premiados -->
+      <div class="fade-up" style="margin-top:28px; background:linear-gradient(135deg,var(--preto) 0%,#0d1a22 100%); border:1px solid rgba(112,148,164,0.25); border-radius:16px; padding:28px 36px; display:flex; align-items:center; gap:28px; flex-wrap:wrap;">
+        <div style="flex:1; min-width:200px;">
+          <div style="font-size:0.65rem; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--azul); margin-bottom:10px;"><i class="fa-solid fa-trophy" style="margin-right:6px;"></i> Vinhos Premiados</div>
+          <h3 style="font-family:var(--ff-titulo); font-size:clamp(1.2rem,2.5vw,1.6rem); font-weight:700; color:var(--branco); margin-bottom:10px; line-height:1.25;">Rótulos reconhecidos internacionalmente</h3>
+          <p style="font-size:0.86rem; color:rgba(255,255,255,0.48); line-height:1.75; max-width:460px;">Nossa linha inclui vinhos premiados em concursos internacionais, reconhecidos pela sua qualidade excepcional e identidade argentina única.</p>
+        </div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+          <div style="background:rgba(112,148,164,0.10); border:1px solid rgba(112,148,164,0.22); border-radius:10px; padding:12px 16px; text-align:center; min-width:70px;">
+            <i class="fa-solid fa-medal" style="font-size:1.3rem; color:var(--azul); display:block; margin-bottom:6px;"></i>
+            <span style="font-size:0.68rem; font-weight:600; color:rgba(255,255,255,0.5); line-height:1.3;">Medalhas<br>de Ouro</span>
+          </div>
+          <div style="background:rgba(112,148,164,0.10); border:1px solid rgba(112,148,164,0.22); border-radius:10px; padding:12px 16px; text-align:center; min-width:70px;">
+            <i class="fa-solid fa-star" style="font-size:1.3rem; color:var(--azul); display:block; margin-bottom:6px;"></i>
+            <span style="font-size:0.68rem; font-weight:600; color:rgba(255,255,255,0.5); line-height:1.3;">Avaliações<br>de Destaque</span>
+          </div>
+          <div style="background:rgba(112,148,164,0.10); border:1px solid rgba(112,148,164,0.22); border-radius:10px; padding:12px 16px; text-align:center; min-width:70px;">
+            <i class="fa-solid fa-award" style="font-size:1.3rem; color:var(--azul); display:block; margin-bottom:6px;"></i>
+            <span style="font-size:0.68rem; font-weight:600; color:rgba(255,255,255,0.5); line-height:1.3;">Concursos<br>Internacionais</span>
+          </div>
         </div>
       </div>
 
@@ -2082,6 +2027,84 @@
     </div>
   </section>
 
+  <!-- ══════ SOBRE ══════ -->
+  <section id="sobre">
+    <div class="container">
+      <div class="sobre-grid">
+        <div class="sobre-visual fade-left">
+          <div class="sobre-box">
+            <i class="fa-solid fa-star sobre-box-icon"></i>
+            <div class="sobre-box-brand">Estrella Do Sul</div>
+            <div class="sobre-box-sub">Comércio de Bebidas · Distribuição Nacional</div>
+            <p>"Desde 2021, construímos parcerias sólidas com base em confiança, eficiência operacional e compromisso com a qualidade."</p>
+          </div>
+          <div class="sobre-badge">
+            <strong>2021</strong>
+            <span>Desde</span>
+          </div>
+        </div>
+
+        <div class="sobre-text fade-right">
+          <span class="section-tag">Nossa história</span>
+          <h2>Parcerias construídas com <span>confiança e excelência</span></h2>
+          <p>A Estrella Do Sul Comércio de Bebidas LTDA é uma empresa fundada em <strong>2021</strong>, com atuação na distribuição de vinhos no Brasil. Com presença estratégica e operação dinâmica, vem consolidando sua atuação por meio de parcerias comerciais sólidas e um portfólio cuidadosamente desenvolvido.</p>
+          <p>Desde sua criação, mantém como pilares a <strong>confiança, a eficiência operacional</strong> e o compromisso com a qualidade, construindo relações consistentes com clientes e parceiros em diferentes segmentos do mercado.</p>
+
+          <div class="sobre-highlights">
+            <div class="sobre-highlight">
+              <i class="fa-solid fa-check"></i>
+              Distribuição especializada em vinhos selecionados
+            </div>
+            <div class="sobre-highlight">
+              <i class="fa-solid fa-check"></i>
+              Linha exclusiva Família Millán
+            </div>
+            <div class="sobre-highlight">
+              <i class="fa-solid fa-check"></i>
+              Atendimento a restaurantes, varejo e eventos
+            </div>
+            <div class="sobre-highlight">
+              <i class="fa-solid fa-check"></i>
+              Condições comerciais personalizadas
+            </div>
+          </div>
+
+          <a href="https://wa.me/5511976122881" target="_blank" rel="noopener noreferrer" class="btn btn-dourado">
+            <i class="fa-brands fa-whatsapp"></i> Falar conosco
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ DIFERENCIAIS ══════ -->
+  <section id="diferenciais" aria-label="Nossos diferenciais">
+    <div class="container">
+      <div class="dif-grid">
+        <div class="dif-item fade-scale d1">
+          <i class="fa-solid fa-handshake"></i>
+          <strong>Confiança</strong>
+          <span>Base de cada parceria</span>
+        </div>
+        <div class="dif-item fade-scale d2">
+          <i class="fa-solid fa-bolt"></i>
+          <strong>Eficiência</strong>
+          <span>Operação dinâmica e ágil</span>
+        </div>
+        <div class="dif-item fade-scale d3">
+          <i class="fa-solid fa-medal"></i>
+          <strong>Qualidade</strong>
+          <span>Portfólio cuidadosamente selecionado</span>
+        </div>
+        <div class="dif-item fade-scale d4">
+          <i class="fa-solid fa-chart-line"></i>
+          <strong>Crescimento</strong>
+          <span>Sustentável e de longo prazo</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ══════ MVV ══════ -->
   <section id="mvv">
     <div class="container">
@@ -2121,7 +2144,7 @@
       <div class="comercial-inner fade-up">
         <span class="section-tag">Seja nosso parceiro</span>
         <h2>Pronto para distribuir <span>vinhos de qualidade</span>?</h2>
-        <p>Entre em contato e saiba como tornar-se um parceiro distribuidor da Estrela do Sul com condições comerciais sob medida para o seu negócio.</p>
+        <p>Entre em contato e saiba como tornar-se um parceiro distribuidor da Estrella Do Sul com condições comerciais sob medida para o seu negócio.</p>
         <div class="comercial-btns">
           <a href="https://wa.me/5511976122881" target="_blank" rel="noopener noreferrer" class="btn btn-dourado">
             <i class="fa-brands fa-whatsapp"></i> Solicitar proposta
@@ -2201,11 +2224,11 @@
 
           <div class="sociais">
             <a href="https://www.instagram.com/vinhosestreladosul/" target="_blank" rel="noopener noreferrer"
-               class="social-btn" aria-label="Instagram Estrela do Sul">
+               class="social-btn" aria-label="Instagram Estrella Do Sul">
               <i class="fa-brands fa-instagram"></i>
             </a>
             <a href="https://wa.me/5511976122881" target="_blank" rel="noopener noreferrer"
-               class="social-btn" aria-label="WhatsApp Estrela do Sul">
+               class="social-btn" aria-label="WhatsApp Estrella Do Sul">
               <i class="fa-brands fa-whatsapp"></i>
             </a>
           </div>
@@ -2237,12 +2260,12 @@
         <div class="footer-brand">
           <div class="footer-brand-icon"><i class="fa-solid fa-star"></i></div>
           <div class="footer-brand-text">
-            <strong>Estrela do Sul</strong>
-            <span>Comércio de Bebidas · Guarulhos, SP</span>
+            <strong>Estrella Do Sul</strong>
+            <span>Comércio de Bebidas · Brasil</span>
           </div>
         </div>
         <div class="footer-info">
-          <strong>Estrela do Sul Comércio de Bebidas LTDA</strong><br>
+          <strong>Estrella Do Sul Comércio de Bebidas LTDA</strong><br>
           CNPJ 42.590.292/0001-00 · Av. Natália Zarif, 660 — Jd. São Geraldo, Guarulhos/SP<br>
           Segunda a sexta, 09h00 às 18h00
         </div>
@@ -2258,7 +2281,7 @@
         </div>
       </div>
     </div>
-    <p class="footer-copy">© 2025 Estrela do Sul Comércio de Bebidas LTDA · CNPJ 42.590.292/0001-00</p>
+    <p class="footer-copy">© 2025 Estrella Do Sul Comércio de Bebidas LTDA · CNPJ 42.590.292/0001-00</p>
 
     <!-- Rodapé MonteSite - Atualização Automática -->
     <div id="montesite-footer-badge"></div>
@@ -2267,7 +2290,7 @@
 
   <!-- WhatsApp flutuante -->
   <a href="https://wa.me/5511976122881" target="_blank" rel="noopener noreferrer"
-     class="whatsapp-float" aria-label="WhatsApp Estrela do Sul">
+     class="whatsapp-float" aria-label="WhatsApp Estrella Do Sul">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
@@ -2347,7 +2370,7 @@
     const tiltCards = document.querySelectorAll('.servico-card, .portfolio-card, .mvv-card, .mercado-feature');
     tiltCards.forEach(card => {
       const isDark = card.classList.contains('servico-card') || card.classList.contains('destaque');
-      const spotColor = isDark ? 'rgba(201,168,76,0.10)' : 'rgba(201,168,76,0.08)';
+      const spotColor = isDark ? 'rgba(112,148,164,0.10)' : 'rgba(112,148,164,0.08)';
 
       card.addEventListener('mousemove', e => {
         const rect = card.getBoundingClientRect();
