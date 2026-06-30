@@ -840,8 +840,8 @@
     ══════════════════════════════════ */
     #servicos {
       background:
-        linear-gradient(rgba(26,26,26,0.90), rgba(26,26,26,0.90)),
-        url('images/bg-servicos.jpg') center / cover no-repeat;
+        linear-gradient(rgba(26,26,26,0.88), rgba(26,26,26,0.88)),
+        url('images/gran_cordero_3.jpg') center / cover no-repeat;
       background-attachment: scroll, fixed;
     }
 
@@ -1748,6 +1748,112 @@
       100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
     }
 
+    /* ══ HERO PRODUTO ══ */
+    .hero-product-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .hero-bottle-wrap {
+      position: relative;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      animation: floatCard 8s ease-in-out infinite;
+    }
+    .hero-bottle-img {
+      height: clamp(300px, 38vw, 480px);
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 28px 64px rgba(0,0,0,0.6));
+      display: block;
+    }
+    .hero-award-badge {
+      position: absolute;
+      top: 16%;
+      right: -6%;
+      background: linear-gradient(135deg, var(--dourado), var(--dourado-2));
+      border-radius: 50%;
+      width: 84px;
+      height: 84px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      box-shadow: 0 6px 22px rgba(0,0,0,0.4);
+      border: 2px solid rgba(255,255,255,0.18);
+    }
+    .hab-score {
+      font-family: var(--ff-titulo);
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--branco);
+      line-height: 1;
+    }
+    .hab-label {
+      font-size: 0.42rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.35;
+      margin-top: 2px;
+    }
+    .hero-brand-pill {
+      position: absolute;
+      bottom: -6%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(112,148,164,0.30);
+      border-radius: 100px;
+      padding: 9px 22px;
+      text-align: center;
+      backdrop-filter: blur(12px);
+      white-space: nowrap;
+    }
+    .hero-brand-pill span {
+      display: block;
+      font-size: 0.58rem;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--azul);
+    }
+    .hero-brand-pill strong {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.80);
+      margin-top: 1px;
+    }
+
+    /* ══ PORTFOLIO COM IMAGEM ══ */
+    .portfolio-card-img-wrap {
+      margin: -36px -24px 20px;
+      height: 200px;
+      overflow: hidden;
+      border-radius: var(--radius) var(--radius) 0 0;
+      background: var(--cinza);
+    }
+    .portfolio-card.destaque .portfolio-card-img-wrap {
+      background: #0c1820;
+    }
+    .portfolio-card-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      padding: 14px;
+      transition: transform 0.4s ease;
+      display: block;
+    }
+    .portfolio-card:hover .portfolio-card-img-wrap img {
+      transform: scale(1.04);
+    }
+
     /* ══ TILT — transição suave ao sair ══ */
     .servico-card, .portfolio-card, .mvv-card, .mercado-feature {
       transition: transform .15s ease, box-shadow var(--tr), border-color var(--tr),
@@ -1837,19 +1943,16 @@
           </div>
         </div>
 
-        <div class="hero-visual">
-          <div class="hero-card" aria-hidden="true">
-            <div class="hero-card-icon">
-              <i class="fa-solid fa-wine-glass-empty"></i>
+        <div class="hero-product-visual">
+          <div class="hero-bottle-wrap" aria-hidden="true">
+            <img src="images/gran_cordero_1.jpg" alt="Gran Cordero Malbec · Família Millán" class="hero-bottle-img">
+            <div class="hero-award-badge">
+              <span class="hab-score">91</span>
+              <span class="hab-label">Descor­<br>chados<br>2026</span>
             </div>
-            <div class="hero-card-label">Linha exclusiva</div>
-            <h3>Família Millán</h3>
-            <p>Rótulos selecionados com foco em procedência, excelência e experiência para diferentes perfis de consumo.</p>
-            <div class="hero-card-tiers">
-              <a href="vitrine.html" class="hero-card-tier">Vinhos de entrada</a>
-              <a href="vitrine.html" class="hero-card-tier">Gama média</a>
-              <a href="vitrine.html" class="hero-card-tier">Premium</a>
-              <a href="vitrine.html" class="hero-card-tier">Ultra premium</a>
+            <div class="hero-brand-pill">
+              <span>Família Millán</span>
+              <strong>Gran Cordero · Malbec</strong>
             </div>
           </div>
         </div>
@@ -1872,50 +1975,77 @@
 
       <div class="portfolio-grid">
         <div class="portfolio-card fade-scale d1">
-          <div class="portfolio-tier">Categoria</div>
-          <i class="fa-solid fa-wine-bottle portfolio-icon"></i>
+          <div class="portfolio-card-img-wrap">
+            <img src="images/grafica_mmw_3.jpg" alt="Mosquita Muerta Wines · Vinhos de entrada e gama média">
+          </div>
+          <div class="portfolio-tier">Mosquita Muerta Wines</div>
           <h3>Vinhos de entrada</h3>
           <p>Opções acessíveis com qualidade e personalidade, ideais para apresentar a linha Família Millán a novos consumidores.</p>
         </div>
         <div class="portfolio-card fade-scale d2">
-          <div class="portfolio-tier">Categoria</div>
-          <i class="fa-solid fa-wine-glass portfolio-icon"></i>
+          <div class="portfolio-card-img-wrap">
+            <img src="images/grafica_fb.jpg" alt="Fuego Blanco · Gama média">
+          </div>
+          <div class="portfolio-tier">Fuego Blanco</div>
           <h3>Gama média</h3>
           <p>Equilíbrio entre custo e qualidade, com rótulos que proporcionam uma experiência diferenciada e consistente.</p>
         </div>
         <div class="portfolio-card destaque fade-scale d3">
-          <div class="portfolio-tier">Destaque</div>
-          <i class="fa-solid fa-star portfolio-icon"></i>
-          <h3>Premium</h3>
+          <div class="portfolio-card-img-wrap">
+            <img src="images/grafica_blend_black_mmw.jpg" alt="Mosquita Muerta Wines · Premium">
+          </div>
+          <div class="portfolio-tier">Destaque · Premium</div>
+          <h3>Linha Premium</h3>
           <p>Seleção cuidadosa de vinhos com alta complexidade, reconhecidos pela sua personalidade e procedência.</p>
         </div>
         <div class="portfolio-card fade-scale d4">
-          <div class="portfolio-tier">Exclusivo</div>
-          <i class="fa-solid fa-crown portfolio-icon"></i>
+          <div class="portfolio-card-img-wrap">
+            <img src="images/grafica_iconos_mmw.jpeg" alt="Malcriado 97pts · Ultra premium">
+          </div>
+          <div class="portfolio-tier">Exclusivo · Ultra Premium</div>
           <h3>Ultra premium</h3>
           <p>O topo do portfólio: rótulos raros e sofisticados, para os paladares mais exigentes e ocasiões especiais.</p>
         </div>
       </div>
 
       <!-- Premiados -->
-      <div class="fade-up" style="margin-top:28px; background:linear-gradient(135deg,var(--preto) 0%,#0d1a22 100%); border:1px solid rgba(112,148,164,0.25); border-radius:16px; padding:28px 36px; display:flex; align-items:center; gap:28px; flex-wrap:wrap;">
-        <div style="flex:1; min-width:200px;">
-          <div style="font-size:0.65rem; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--azul); margin-bottom:10px;"><i class="fa-solid fa-trophy" style="margin-right:6px;"></i> Vinhos Premiados</div>
-          <h3 style="font-family:var(--ff-titulo); font-size:clamp(1.2rem,2.5vw,1.6rem); font-weight:700; color:var(--branco); margin-bottom:10px; line-height:1.25;">Rótulos reconhecidos internacionalmente</h3>
-          <p style="font-size:0.86rem; color:rgba(255,255,255,0.48); line-height:1.75; max-width:460px;">Nossa linha inclui vinhos premiados em concursos internacionais, reconhecidos pela sua qualidade excepcional e identidade argentina única.</p>
+      <div class="fade-up" style="margin-top:56px;">
+        <div style="text-align:center; margin-bottom:36px;">
+          <div style="font-size:0.65rem; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--azul); margin-bottom:12px; display:inline-flex; align-items:center; gap:8px;">
+            <i class="fa-solid fa-trophy"></i> Vinhos Premiados · Descorchados 2026
+          </div>
+          <h3 style="font-family:var(--ff-titulo); font-size:clamp(1.5rem,3vw,2.2rem); font-weight:700; color:var(--texto); margin-bottom:10px; line-height:1.2;">Rótulos reconhecidos internacionalmente</h3>
+          <p style="font-size:0.9rem; color:var(--texto-leve); max-width:560px; margin:0 auto; line-height:1.75;">Nossa linha inclui vinhos premiados no Descorchados 2026 — a principal referência de avaliação de vinhos argentinos e chilenos.</p>
         </div>
-        <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
-          <div style="background:rgba(112,148,164,0.10); border:1px solid rgba(112,148,164,0.22); border-radius:10px; padding:12px 16px; text-align:center; min-width:70px;">
-            <i class="fa-solid fa-medal" style="font-size:1.3rem; color:var(--azul); display:block; margin-bottom:6px;"></i>
-            <span style="font-size:0.68rem; font-weight:600; color:rgba(255,255,255,0.5); line-height:1.3;">Medalhas<br>de Ouro</span>
+
+        <!-- Grid com imagens reais dos premiados -->
+        <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:20px;">
+          <div style="border-radius:14px; overflow:hidden; background:var(--cinza-claro); box-shadow:0 4px 20px rgba(0,0,0,0.09);">
+            <img src="images/grafica_iconos_mmw.jpeg" alt="Malcriado 97 pontos · Mosquita Muerta Wines · Descorchados 2026" style="width:100%; height:auto; display:block;">
           </div>
-          <div style="background:rgba(112,148,164,0.10); border:1px solid rgba(112,148,164,0.22); border-radius:10px; padding:12px 16px; text-align:center; min-width:70px;">
-            <i class="fa-solid fa-star" style="font-size:1.3rem; color:var(--azul); display:block; margin-bottom:6px;"></i>
-            <span style="font-size:0.68rem; font-weight:600; color:rgba(255,255,255,0.5); line-height:1.3;">Avaliações<br>de Destaque</span>
+          <div style="border-radius:14px; overflow:hidden; background:var(--cinza-claro); box-shadow:0 4px 20px rgba(0,0,0,0.09);">
+            <img src="images/grafica_blend_black_mmw.jpg" alt="Mosquita Muerta Wines — Black, Blend de Tintas e Blend de Blancas · Descorchados 2026" style="width:100%; height:auto; display:block;">
           </div>
-          <div style="background:rgba(112,148,164,0.10); border:1px solid rgba(112,148,164,0.22); border-radius:10px; padding:12px 16px; text-align:center; min-width:70px;">
-            <i class="fa-solid fa-award" style="font-size:1.3rem; color:var(--azul); display:block; margin-bottom:6px;"></i>
-            <span style="font-size:0.68rem; font-weight:600; color:rgba(255,255,255,0.5); line-height:1.3;">Concursos<br>Internacionais</span>
+          <div style="border-radius:14px; overflow:hidden; background:var(--cinza-claro); box-shadow:0 4px 20px rgba(0,0,0,0.09);">
+            <img src="images/grafica_mmw_3.jpg" alt="Mosquita Muerta Wines — Sapo de Otro Pozo, Pispi, Perro Callejero e Gran Cordero · Descorchados 2026" style="width:100%; height:auto; display:block;">
+          </div>
+          <div style="border-radius:14px; overflow:hidden; background:var(--cinza-claro); box-shadow:0 4px 20px rgba(0,0,0,0.09);">
+            <img src="images/grafica_fb.jpg" alt="Fuego Blanco — Malbec, Sauvignon Blanc e Malbec-Syrah · Descorchados 2026" style="width:100%; height:auto; display:block;">
+          </div>
+        </div>
+
+        <!-- Garrafa Gran Cordero em destaque + CTA -->
+        <div style="margin-top:28px; background:linear-gradient(135deg,var(--preto) 0%,#0d1a22 100%); border:1px solid rgba(112,148,164,0.20); border-radius:16px; display:grid; grid-template-columns:auto 1fr; gap:0; overflow:hidden;">
+          <div style="background:rgba(255,255,255,0.03); display:flex; align-items:center; justify-content:center; padding:24px 32px;">
+            <img src="images/gran_cordero_1.jpg" alt="Gran Cordero Malbec · Família Millán" style="height:220px; width:auto; display:block; object-fit:contain;">
+          </div>
+          <div style="padding:32px 36px; display:flex; flex-direction:column; justify-content:center;">
+            <div style="font-size:0.62rem; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--azul); margin-bottom:10px;"><i class="fa-solid fa-star" style="margin-right:5px;"></i> Destaque do portfólio</div>
+            <h4 style="font-family:var(--ff-titulo); font-size:clamp(1.1rem,2vw,1.5rem); font-weight:700; color:var(--branco); margin-bottom:10px; line-height:1.3;">Gran Cordero con Piel de Lobo<br><span style="color:var(--azul); font-size:0.85em;">Malbec · Mendoza Argentina</span></h4>
+            <p style="font-size:0.85rem; color:rgba(255,255,255,0.5); line-height:1.7; margin-bottom:20px; max-width:400px;">Um dos rótulos mais premiados da linha Família Millán. Reconhecido pelo Descorchados 2026 pela complexidade, personalidade e identidade argentina única.</p>
+            <a href="https://wa.me/5511976122881" target="_blank" rel="noopener noreferrer" class="btn btn-dourado" style="align-self:flex-start; font-size:0.82rem; padding:0.75rem 1.6rem;">
+              <i class="fa-brands fa-whatsapp"></i> Solicitar informações
+            </a>
           </div>
         </div>
       </div>
